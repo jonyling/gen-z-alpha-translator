@@ -53,7 +53,12 @@ def load_source(src: dict) -> list[dict]:
     """
     path = RAW_DIR / src["file"]
     if not path.exists():
-        print(f"  !! SKIP: {src['file']} not found in data/raw/")
+        if src.get("use_for_eval"):
+            # This is the file the eval set is built from — missing it is serious.
+            print(f"  !!!! CRITICAL: eval source {src['file']} NOT FOUND in data/raw/ "
+                  f"-- the eval set will be empty/degenerate. Fix the filename in config.py.")
+        else:
+            print(f"  !! SKIP: {src['file']} not found in data/raw/")
         return []
 
     df = pd.read_csv(path) if path.suffix == ".csv" else pd.read_excel(path)
@@ -204,6 +209,28 @@ def write_jsonl(path, rows) -> None:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def load_existing_eval() -> list[dict] | None:
+    """Return the already-frozen eval set if one exists, else None.
+
+    Freezing the eval set on disk means adding/removing datasets later does NOT
+    silently change which items are tested (which would misalign human grades).
+    To deliberately re-freeze, delete data/processed/eval.jsonl and re-run.
+    """
+    if not EVAL_PATH.exists():
+        return None
+    with open(EVAL_PATH, encoding="utf-8") as f:
+        return [json.loads(line) for line in f]
+
+
+def banned_from_eval(eval_items: list[dict]) -> set:
+    """Every text that appears in the eval set (input + reference), lowercased."""
+    banned = set()
+    for it in eval_items:
+        banned.add(it["input"].lower())
+        banned.add(it["reference"].lower())
+    return banned
+
+
 def main() -> int:
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     rng = random.Random(RANDOM_SEED)
@@ -221,7 +248,21 @@ def main() -> int:
     all_records = dedupe(all_records)
     print(f"\nDeduped: {before} -> {len(all_records)} unique pairs")
 
-    eval_items, train_rows = freeze_eval(all_records, rng)
+    existing_eval = load_existing_eval()
+    if existing_eval is not None:
+        # Frozen eval already exists -> keep it, just rebuild training from the
+        # current data while excluding everything that appears in the eval set.
+        eval_items = existing_eval
+        banned = banned_from_eval(eval_items)
+        train_rows = [r for r in all_records
+                      if r["slang"].lower() not in banned
+                      and r["english"].lower() not in banned]
+        print(f"\nUsing EXISTING frozen eval.jsonl ({len(eval_items)} items). "
+              f"Delete it to re-freeze.")
+    else:
+        eval_items, train_rows = freeze_eval(all_records, rng)
+        print("\nFroze a NEW eval set (no existing eval.jsonl found).")
+
     train_examples = build_train(train_rows)
 
     # Safety: eval inputs must NOT appear as training targets/inputs.

@@ -39,7 +39,7 @@ SOURCES = [
         "english_col": "normal",
     },
     {
-        "file": "genz_dataset_augmented_1500 (1).csv",
+        "file": "genz_dataset_augmented_1500.csv",
         "slang_col": "slang_sentence",
         "english_col": "normal_sentence",
         # extra columns used to build a good, well-labelled eval set:
