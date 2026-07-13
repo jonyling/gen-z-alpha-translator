@@ -14,3 +14,6 @@ data/unused/genz_slang_usage_2020_2025.csv
 # OS / editor
 .DS_Store
 .ipynb_checkpoints/
+
+#token
+.hugging token

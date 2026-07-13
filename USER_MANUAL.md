@@ -47,13 +47,34 @@ Two audiences:
 
 ---
 
-## B. Develop locally (uv)
+## B. Develop AND train locally (uv + your own NVIDIA GPU)
+
+The uv environment installs the full GPU stack (CUDA torch, unsloth, trl, etc.), so if you
+have an NVIDIA GPU you can train locally — no Colab needed for dev.
+
 ```bash
-uv sync                             # creates .venv + installs data-prep deps
+uv sync                             # creates .venv + installs everything
 uv run python src/prepare_data.py   # rebuild data/processed/
+uv run python -c "import torch; print('GPU:', torch.cuda.get_device_name(0))"   # sanity check
 ```
-Training locally also needs a T4-class GPU + `uv pip install "unsloth" transformers trl peft bitsandbytes accelerate`.
-If you don't have a GPU locally, just do data work here and train on Colab.
+
+**One-time Hugging Face login** (from a terminal):
+```bash
+uv run hf auth login                # paste your token; saved permanently
+```
+(Often not even required — we use unsloth's open mirror of Llama 3.2 — but this avoids surprises.)
+
+**Run the notebook in VS Code:**
+1. Open `train_genz_translator.ipynb`.
+2. Kernel picker (top-right) → **Python Environments** → pick **`.venv`**.
+3. Run cells top to bottom. It auto-detects "local", skips the Colab install, and uses your GPU.
+   On a modern GPU it trains faster than the T4 and uses **bf16** automatically.
+
+> **GPU note:** this project is pinned to the CUDA 12.8 (`cu128`) torch build for an
+> RTX 5070 (Blackwell). If you set this up on a *different* machine with an older GPU/driver,
+> you may need a different CUDA index — see `[tool.uv.sources]` in `pyproject.toml`.
+
+If you don't have an NVIDIA GPU, do data work here and train on Colab (section A).
 
 ---
 

@@ -9,6 +9,8 @@ dependencies = [
     "pandas>=2.2",
     "openpyxl>=3.1",        # read the .xlsx sources
     "datasets>=2.19",       # load jsonl into HF Datasets for training
+    "unsloth>=2026.7.2",
+    "ipykernel>=6.29",      # lets VS Code / Jupyter run the notebook against this venv
 ]
 
 [project.optional-dependencies]
@@ -28,3 +30,16 @@ train = [
 # This is an application/notebook project, not an installable library, so don't
 # try to build it as a package. Scripts run via `uv run python src/...`.
 package = false
+
+# Pull torch/torchvision from the CUDA 12.8 build index so they run on the
+# local NVIDIA GPU (RTX 5070 / Blackwell needs cu128). Without this, uv installs
+# the CPU-only wheels and the GPU is invisible. Colab ignores this (it installs
+# its own stack in the notebook), so this only affects local runs.
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
