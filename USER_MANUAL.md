@@ -88,7 +88,19 @@ uv run python app.py
 It loads the base model + your saved adapter and opens the Gradio chat box in your browser.
 (Edit the last line of `app.py` to `app.launch(share=True)` if you want a public link to show others.)
 
-> Teammates need the `genz_lora_adapter/` folder to run `app.py`. It is **not** in GitHub by
+### Nicer demo: the messaging-app mockup (real model)
+For the presentation there's a chat-app style demo (a "Slangify" sender phone + auto-translate
+receiver phone) backed by the real model:
+```bash
+uv run python serve.py           # loads the model, serves the page
+# then open http://127.0.0.1:8010
+```
+Type in the sender box → the model slangifies it → the receiver auto-translates it back. Unclear
+input makes it abstain. (Uses port 8010; set `PORT=xxxx` if that's taken. Same look/feel as the
+plain `app.py`, just a fuller demo.) The page also opens offline as a static mockup — it just shows
+"offline demo mode" and uses a placeholder transform until you start `serve.py`.
+
+> Teammates need the `genz_lora_adapter/` folder to run `app.py` / `serve.py`. It is **not** in GitHub by
 > default (it's a model file). Either: (a) each person trains once, or (b) share the adapter
 > folder via Google Drive / Hugging Face, or (c) commit it (it's small, ~50 MB — ask and we can
 > un-ignore it).

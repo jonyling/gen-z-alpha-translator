@@ -466,11 +466,13 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "datasets" },
+    { name = "fastapi" },
     { name = "gradio" },
     { name = "ipykernel" },
     { name = "openpyxl" },
     { name = "pandas" },
     { name = "unsloth" },
+    { name = "uvicorn" },
 ]
 
 [package.optional-dependencies]
@@ -488,6 +490,7 @@ requires-dist = [
     { name = "accelerate", marker = "extra == 'train'", specifier = ">=0.33" },
     { name = "bitsandbytes", marker = "extra == 'train'", specifier = ">=0.43" },
     { name = "datasets", specifier = ">=2.19" },
+    { name = "fastapi", specifier = ">=0.115" },
     { name = "gradio", specifier = ">=6.20.0" },
     { name = "ipykernel", specifier = ">=6.29" },
     { name = "openpyxl", specifier = ">=3.1" },
@@ -497,6 +500,7 @@ requires-dist = [
     { name = "transformers", marker = "extra == 'train'", specifier = ">=4.44" },
     { name = "trl", marker = "extra == 'train'", specifier = ">=0.9" },
     { name = "unsloth", specifier = ">=2026.7.2" },
+    { name = "uvicorn", specifier = ">=0.30" },
 ]
 provides-extras = ["train"]
 

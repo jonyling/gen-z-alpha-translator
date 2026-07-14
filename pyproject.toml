@@ -12,6 +12,8 @@ dependencies = [
     "unsloth>=2026.7.2",
     "ipykernel>=6.29",      # lets VS Code / Jupyter run the notebook against this venv
     "gradio>=6.20.0",
+    "fastapi>=0.115",       # local demo server (serve.py) that backs the chat mockup
+    "uvicorn>=0.30",
 ]
 
 [project.optional-dependencies]
