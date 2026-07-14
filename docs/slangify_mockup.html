@@ -192,10 +192,10 @@
           </div>
         </div>
         <div class="ctx" id="ctxMenu">
-          <button>Copy</button>
-          <button>↩︎ Reply</button>
+          <button id="ctxCopy">Copy</button>
+          <button id="ctxReply">↩︎ Reply</button>
           <button class="accent" id="ctxTranslate">✨ Translate <span class="new">LIVE</span></button>
-          <button class="danger">Delete</button>
+          <button class="danger" id="ctxDelete">Delete</button>
         </div>
       </div>
     </div>
@@ -234,7 +234,7 @@
   const toEnglishOn=()=>$('toEnglish').getAttribute('aria-pressed')==='true'; // Alex: translate incoming -> English
   const revealed=new Set();
   const sendAs={jamie:'slang', alex:'english'};
-  let MODEL_OK=false; const pend=new Set();
+  let MODEL_OK=false; const pend=new Set(); const offline={};  // key i:lang -> true when a fetch failed
 
   async function callModel(text,direction){
     try{
@@ -250,11 +250,15 @@
   // Fill the reader-language form of message i (via the model) if it's missing.
   function ensure(i,myLang){
     const m=convo[i], key=i+':'+myLang;
-    if(m[myLang]!==undefined || pend.has(key)) return;
+    if(m[myLang]!==undefined || pend.has(key) || offline[key]) return;
     pend.add(key);
     const dir = myLang==='slang' ? 'to_slang' : 'to_english';
     const src = myLang==='slang' ? m.english : m.slang;
-    callModel(src,dir).then(o=>{ if(MODEL_OK) m[myLang]=o; else m[myLang]='__OFFLINE__'; pend.delete(key); statusNote(); renderAll(); });
+    callModel(src,dir).then(o=>{
+      pend.delete(key);
+      if(MODEL_OK) m[myLang]=o; else offline[key]=true;   // don't poison m[]; mark offline so we can retry
+      statusNote(); renderAll();
+    });
   }
 
   // phone: 'jamie'(slang side) or 'alex'(english side); myLang is that phone's language
@@ -269,11 +273,14 @@
       const foreign = (m.lang!==myLang);                          // not in my language
       const autoOn = (phone==='jamie'? toSlangOn():toEnglishOn());
       if(!mine && foreign && (autoOn || revealed.has(i))){
-        let t=m[myLang];
-        if(t==='__OFFLINE__'){ t=null; }
-        if(t===undefined){ ensure(i,myLang); }
+        const t=m[myLang];
+        const isOffline=offline[i+':'+myLang];
+        let body;
+        if(t!==undefined){ body=esc(t); }
+        else if(isOffline){ body='<em style="opacity:.6">start serve.py for a live translation</em>'; }
+        else { ensure(i,myLang); body='<em style="opacity:.6">translating…</em>'; }
         const label='Translated to '+(myLang==='slang'?'slang':'English');
-        html+='<div class="xlate"><small>'+label+'</small>'+(t?esc(t):'<em style="opacity:.6">translating…</em>')+'</div>';
+        html+='<div class="xlate"><small>'+label+'</small>'+body+'</div>';
       }
       row.innerHTML=html; el.appendChild(row);
     });
@@ -302,15 +309,21 @@
       };
     });
   }
+  const ctxLang=()=>{const p=ctx.closest('.phone');return p&&p.classList.contains('slang')?'slang':'english';};
+  const origText=m=>m.lang==='slang'?m.slang:m.english;
   $('ctxTranslate').onclick=(e)=>{
     e.stopPropagation();
     if(ctxTarget!=null){
-      const phone=ctx.closest('.phone'); const myLang = phone && phone.classList.contains('slang')?'slang':'english';
+      const myLang=ctxLang(); const key=ctxTarget+':'+myLang;
       const m=convo[ctxTarget]; if(m) m[myLang]=undefined;   // force a fresh live translation
+      delete offline[key];
       revealed.add(ctxTarget); renderAll();
     }
     ctx.style.display='none';
   };
+  $('ctxCopy').onclick=(e)=>{e.stopPropagation(); if(ctxTarget!=null){const t=origText(convo[ctxTarget]); if(navigator.clipboard)navigator.clipboard.writeText(t).catch(()=>{});} ctx.style.display='none';};
+  $('ctxReply').onclick=(e)=>{e.stopPropagation(); const inp=ctxLang()==='slang'?$('draftB'):$('draftW'); if(inp)inp.focus(); ctx.style.display='none';};
+  $('ctxDelete').onclick=(e)=>{e.stopPropagation(); if(ctxTarget!=null){convo.splice(ctxTarget,1); revealed.clear(); for(const k in offline)delete offline[k]; renderAll();} ctx.style.display='none';};
   document.addEventListener('click',()=>{ctx.style.display='none';});
 
   function bindToggle(id){const el=$(id);el.addEventListener('click',()=>{el.setAttribute('aria-pressed',el.getAttribute('aria-pressed')==='true'?'false':'true');renderAll();});}
@@ -329,7 +342,18 @@
   $('draftB').addEventListener('keydown',e=>{if(e.key==='Enter')send('jamie');});
   $('draftW').addEventListener('keydown',e=>{if(e.key==='Enter')send('alex');});
 
-  fetch('/api/health').then(r=>{MODEL_OK=r.ok;}).catch(()=>{MODEL_OK=false;}).finally(statusNote);
+  // Health check + auto-recovery: if the server comes up after being offline,
+  // clear the offline markers and re-render so stuck bubbles translate.
+  function pingHealth(){
+    fetch('/api/health').then(r=>r.ok).catch(()=>false).then(ok=>{
+      const recovered = ok && !MODEL_OK && Object.keys(offline).length;
+      MODEL_OK=ok;
+      if(recovered){ for(const k in offline) delete offline[k]; }
+      statusNote(); if(recovered) renderAll();
+    });
+  }
+  pingHealth();
+  setInterval(pingHealth, 5000);
   renderAll(); statusNote();
 })();
 </script>

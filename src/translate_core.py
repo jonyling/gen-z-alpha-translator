@@ -28,8 +28,15 @@ def generate_translation(model, tokenizer, tag: str, text: str) -> str:
         tokenize=True, add_generation_prompt=True,
         return_tensors="pt", return_dict=True,
     )
-    input_ids = enc["input_ids"].to("cuda")
-    attention_mask = enc["attention_mask"].to("cuda") if "attention_mask" in enc else None
+    # Most tokenizers return a dict-like (input_ids + attention_mask); older ones
+    # may return the ids tensor directly. Handle both so a version bump can't break
+    # all three surfaces at once.
+    if hasattr(enc, "keys"):
+        input_ids = enc["input_ids"].to("cuda")
+        attention_mask = enc["attention_mask"].to("cuda") if "attention_mask" in enc else None
+    else:
+        input_ids = enc.to("cuda")
+        attention_mask = None
     out = model.generate(
         input_ids=input_ids,
         attention_mask=attention_mask,
