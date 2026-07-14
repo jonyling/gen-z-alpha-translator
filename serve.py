@@ -40,13 +40,24 @@ FastLanguageModel.for_inference(model)
 print(">> model ready")
 
 
+import threading
+_gen_lock = threading.Lock()   # serialize GPU calls so concurrent requests don't collide
+
 def run_model(tag: str, text: str) -> str:
     msgs = [{"role": "user", "content": f"{tag}\n{text}"}]
-    ids = tokenizer.apply_chat_template(
-        msgs, tokenize=True, add_generation_prompt=True, return_tensors="pt"
+    enc = tokenizer.apply_chat_template(
+        msgs, tokenize=True, add_generation_prompt=True,
+        return_tensors="pt", return_dict=True,
     ).to("cuda")
-    out = model.generate(input_ids=ids, max_new_tokens=80, use_cache=True, do_sample=False)
-    return tokenizer.decode(out[0][ids.shape[1]:], skip_special_tokens=True).strip()
+    with _gen_lock:
+        out = model.generate(
+            input_ids=enc["input_ids"],
+            attention_mask=enc.get("attention_mask"),
+            max_new_tokens=80, use_cache=True, do_sample=False,
+            repetition_penalty=1.3, no_repeat_ngram_size=3,   # stop the "letaleta…" loops
+            pad_token_id=tokenizer.eos_token_id,
+        )
+    return tokenizer.decode(out[0][enc["input_ids"].shape[1]:], skip_special_tokens=True).strip()
 
 
 app = FastAPI()
