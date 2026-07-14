@@ -68,6 +68,9 @@ DICT_SOURCES = [
     {"file": "gen_zz_words.csv", "term_col": "Word/Phrase", "meaning_col": "Definition"},
     {"file": "genz_slang.csv",   "term_col": "Word",        "meaning_col": "Meaning"},
     {"file": "genz_emojis.csv",  "term_col": "emoji",       "meaning_col": "Description", "emoji": True},
+    # Real crowd-sourced definitions, fetched by src/fetch_urban.py (optional; only
+    # used once the file exists). Run that script to (re)build it, then retrain.
+    {"file": "urban_slang.csv",  "term_col": "term",        "meaning_col": "definition"},
 ]
 
 # How many eval items to freeze PER DIRECTION (spec: ~30 each -> ~60 total).

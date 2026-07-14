@@ -471,6 +471,7 @@ dependencies = [
     { name = "ipykernel" },
     { name = "openpyxl" },
     { name = "pandas" },
+    { name = "requests" },
     { name = "unsloth" },
     { name = "uvicorn" },
 ]
@@ -496,6 +497,7 @@ requires-dist = [
     { name = "openpyxl", specifier = ">=3.1" },
     { name = "pandas", specifier = ">=2.2" },
     { name = "peft", marker = "extra == 'train'", specifier = ">=0.12" },
+    { name = "requests", specifier = ">=2.32" },
     { name = "torch", marker = "extra == 'train'", index = "https://download.pytorch.org/whl/cu128" },
     { name = "transformers", marker = "extra == 'train'", specifier = ">=4.44" },
     { name = "trl", marker = "extra == 'train'", specifier = ">=0.9" },
