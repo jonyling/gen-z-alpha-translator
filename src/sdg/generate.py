@@ -12,7 +12,7 @@ import json
 import sys
 import time
 
-from config import RAW_DIR, SDG_TARGET
+from config import RAW_DIR, SDG_REQUEST_SLEEP, SDG_TARGET
 from sdg.attributes import Recipe, sample_recipes
 from teacher import chat, extract_json, get_client
 
@@ -98,7 +98,7 @@ def main(argv=None) -> int:
                 rec = None
             f.write(json.dumps(rec or {"_failed": True}, ensure_ascii=False) + "\n")
             f.flush()
-            time.sleep(0.25)
+            time.sleep(SDG_REQUEST_SLEEP)
             if i % 50 == 0:
                 print(f"  {i}/{len(recipes)} ...")
     print(f"\nDone. Raw file: {RAW_OUT}. Next: uv run python -m sdg.validate")

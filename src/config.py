@@ -125,6 +125,7 @@ JUDGE_MODEL = TEACHER_MODEL
 # Constraint-First SDG settings.
 SDG_PATH = RAW_DIR / "synthetic_slang.csv"
 SDG_TARGET = 1200                       # kept pairs to aim for
+SDG_REQUEST_SLEEP = 2.1                  # seconds between teacher calls (Groq free tier ~30 req/min)
 SDG_HARD_NEG_FRAC = 0.12                # fraction generated as "bait" hard negatives
 SDG_DIRECTION_WEIGHTS = [("to_english", 0.65), ("to_slang", 0.35)]  # aim at weak dir
 SDG_DIFFICULTY_WEIGHTS = [("clear", 0.5), ("ambiguous", 0.3), ("edge", 0.2)]
