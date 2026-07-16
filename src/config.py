@@ -39,20 +39,11 @@ SOURCES = [
         "english_col": "normal",
     },
     {
-        "file": "genz_dataset_augmented_1500.csv",
+        "file": "genz_grok_synthetic.csv",
         "slang_col": "slang_sentence",
         "english_col": "normal_sentence",
-        # extra columns used to build a good, well-labelled eval set:
-        "term_col": "slang_term",       # the slang word itself (answer key)
-        "meaning_col": "meaning",       # plain-English meaning (answer key)
-        "strat_col": "trend_status",    # trending / real / generated (for stratifying)
-        "use_for_eval": True,           # hold some of these rows out as the test set
-    },
-    {
-        "file": "genz_synthetic_dataset.csv",
-        "slang_col": "input_text",
-        "english_col": "target_text",
-        "difficulty_col": "difficulty_level",  # easy / medium / hard
+        "term_col": "slang_term",
+        "meaning_col": "meaning",
     },
     {
         "file": "synthetic_slang.csv",
@@ -62,6 +53,13 @@ SOURCES = [
         # metadata columns (slang_term/tone/difficulty/is_hard_negative) are ignored
         # by load_source; kept in the CSV for provenance.
     },
+    # Dropped gloss-heavy Kaggle sets (kept on disk for reference only).
+    # {
+    #     "file": "genz_synthetic_dataset.csv",
+    #     "slang_col": "input_text",
+    #     "english_col": "target_text",
+    #     "difficulty_col": "difficulty_level",  # easy / medium / hard
+    # },
 ]
 
 # ---------------------------------------------------------------------------

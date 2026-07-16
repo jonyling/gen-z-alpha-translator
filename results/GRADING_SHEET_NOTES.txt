@@ -1,0 +1,6 @@
+Eval = fresh Grok held-out pairs (not taken from the old gloss freeze).
+Sentences were generated for this sheet; train.jsonl was rebuilt to exclude them.
+The CURRENT adapter was trained before this holdout — fair for base vs tuned comparison on these items (tuned has not been trained on these exact sentences).
+
+Human grading: fill base_rater1/2 and tuned_rater1/2 with 1 or 0.
+Then run the notebook §7 scoring cell, or score by hand for slides.

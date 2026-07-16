@@ -1,548 +1,109 @@
 id,type,direction,strat,input,reference,slang_term,meaning,base_output,tuned_output,base_rater1,base_rater2,tuned_rater1,tuned_rater2
-e2e_000,translate,to_english,real,She has such beta af energy today.,She has such extremely beta energy today.,beta af,extremely beta,"The translation of ""beta af energy"" is not a standard phrase, but I can provide you with an educated guess.
+e2e_000,translate,to_english,grok_heldout,"Bro, Steph is the GOAT when it comes to clutch threes.","Man, Steph is the best ever at hitting clutch three-pointers.",GOAT,greatest of all time,"""Hey brother, Stephen Curry is considered the greatest of all time (GOAT) for his ability to make game-winning three-pointers.""",Steph Curry has made some of the most incredible shots in NBA history at crunch time and beyond. He's known for his ability to make game-winning three-pointers from anywhere on the court with a high degree of accuracy. His shooting range extends far past half-court; he can shoot effectively from any,,,,
+e2s_000,translate,to_slang,grok_heldout,"Man, Steph is the best ever at hitting clutch three-pointers.","Bro, Steph is the GOAT when it comes to clutch threes.",GOAT,greatest of all time,"""Steph's straight fire from downtown.""",Steph Curry is a real one for making those late-game shots.,,,,
+e2e_001,translate,to_english,grok_heldout,"I got a soft spot for late-night pizza runs, can't help it.",I really have a thing for grabbing pizza late at night.,Soft Spot,special fondness,I have a weakness for ordering pizzas at night and I just can't resist the urge.,Late night pizzas are my absolute favorite thing ever! Can’t resist them at all. I love how they smell and taste so good even when you’re not hungry anymore but still want another slice because why the hell no?! It’s like magic or something that makes me feel happy every single time i order,,,,
+e2s_001,translate,to_slang,grok_heldout,I really have a thing for grabbing pizza late at night.,"I got a soft spot for late-night pizza runs, can't help it.",Soft Spot,special fondness,"""I'm low-key obsessed with ordering in some pie after hours, tbh.""","Late Night Pizza is my absolute core flavor, no cap!",,,,
+e2e_002,translate,to_english,grok_heldout,She walked in looking 6Y and the whole room went quiet.,She walked in looking really hot and everyone just stared.,6Y,sexy,"""She entered, appearing six years old, causing an instant silence throughout the entire space.""","The girl just looked stunning, everyone was silent for a second.",,,,
+e2s_002,translate,to_slang,grok_heldout,She walked in looking really hot and everyone just stared.,She walked in looking 6Y and the whole room went quiet.,6Y,sexy,"""She came through lookin' straight fire, got the whole room shook.""","Her walk-in was pure fire, no one looked away.",,,,
+e2e_003,translate,to_english,grok_heldout,"LeBron is straight-up the GOAT, nobody else comes close.","LeBron is honestly the best player ever, no one else is close.",GOAT,greatest of all time,Lebron James is unequivocally considered the Greatest of All Time (GOAT) in basketball by many fans and experts; no other player has come even remotely near his level of dominance or achievements on the court.,I think LeBron James should be considered better than anyone ever has been at basketball because he's so good and dominant that no one can even compare him in terms of skill or ability on a court with other players who are also very skilled. He won four NBA championships as well which shows how much talent there,,,,
+e2s_003,translate,to_slang,grok_heldout,"LeBron is honestly the best player ever, no one else is close.","LeBron is straight-up the GOAT, nobody else comes close.",GOAT,greatest of all time,"""King James for life, bruh.""",LBJE,,,,
+e2e_004,translate,to_english,grok_heldout,"She walked in looking so 6Y tonight, everyone was staring.","She walked in looking so hot tonight, everyone was staring.",6Y,sexy,She looked stunning that night and everyone couldn't help but stare at her beauty.,She looked really hot today and the whole room noticed her.,,,,
+e2s_004,translate,to_slang,grok_heldout,"She walked in looking so hot tonight, everyone was staring.","She walked in looking so 6Y tonight, everyone was staring.",6Y,sexy,"""She came through lookin' straight fire and the whole room was low-key obsessed.""","Her walk-in look is pure fire today, no one can stop checking her out!",,,,
+e2e_005,translate,to_english,grok_heldout,"I got a soft spot for my little cousin, can't say no to her.","I have a real soft place for my little cousin, I never refuse her.",Soft Spot,fond weakness,I have a weakness for my young niece; I always refuse to resist her charms.,I have an extra special feeling towards that cute kid of mine who's always around and makes me happy with his silly antics! I just love him so much because he is such sweetie pie in every way possible - the cutest thing you've ever seen or heard; someone very precious indeed...and,,,,
+e2s_005,translate,to_slang,grok_heldout,"I have a real soft place for my little cousin, I never refuse her.","I got a soft spot for my little cousin, can't say no to her.",Soft Spot,fond weakness,"""I got major feels for that lil' sis of mine and she knows not to get on me.""",Soft Spot,,,,
+e2e_006,translate,to_english,grok_heldout,"Bro, she's the GOAT of this whole era, nobody touches her.","Man, she's the best of this whole generation, no one comes close.",GOAT,greatest of all time,She is widely considered the greatest (GOAT) in this entire generation and no one can come close to surpassing her achievements.,He thinks that person is better than anyone else right now.,,,,
+e2s_006,translate,to_slang,grok_heldout,"Man, she's the best of this whole generation, no one comes close.","Bro, she's the GOAT of this whole era, nobody touches her.",GOAT,greatest of all time,"She's lowkey a total GOAT, and nobody can touch her vibes.",She’s a real icon for her age group and era. No comparison can be made with anyone else in that time period or any other. She is truly unique!,,,,
+e2e_007,translate,to_english,grok_heldout,"Damn, you look 6Y in that fit tonight.","Wow, you look really hot in that outfit tonight.",6Y,sexy,I don't understand what you're trying to say. Can you please rephrase or provide more context?,You really clean up when dressed like this!,,,,
+e2s_007,translate,to_slang,grok_heldout,"Wow, you look really hot in that outfit tonight.","Damn, you look 6Y in that fit tonight.",6Y,sexy,"Yaaas, ur fire!",WOWU looking so fire with those shoes!,,,,
+e2e_008,translate,to_english,grok_heldout,I still got a soft spot for that one old song from high school.,I still really like that one old song from high school.,Soft Spot,special affection,I still have a sentimental attachment to the classic hit I used to love listening to in my teenage years.,Even now I have an emotional connection with the same playlist we made in high school.,,,,
+e2s_008,translate,to_slang,grok_heldout,I still really like that one old song from high school.,I still got a soft spot for that one old song from high school.,Soft Spot,special affection,"""I'm low-key obsessed with this fire bop I used to vibe out to in homeroom.""",Still got a soft spot for that one bop in HS.,,,,
+e2e_009,translate,to_english,grok_heldout,"I got a soft spot for those late-night food trucks, always hit different.","I really love those late-night food trucks, they always taste amazing.",Soft Spot,special fondness,"""I have a weakness for the late-night street vendors who serve unique and varied foods."" 
+
+or 
+"" I've developed an affection for these nighttime mobile eateries that offer something new each time.""
+
+However it seems like 'hit' is used in this context as slang meaning ""to try or visit"".",The little street vendors at night are my absolute favorite spots in the city and I never get tired of them even though they're not fancy or popular yet but people love going there because it's just so good! They have such great energy that you can't help feeling happy when eating from their truck.,,,,
+e2s_009,translate,to_slang,grok_heldout,"I really love those late-night food trucks, they always taste amazing.","I got a soft spot for those late-night food trucks, always hit different.",Soft Spot,special fondness,"Yaaas, them grub trucks at night are straight fire!",Those Late Night Food Trucks are so fire! Always hit different every time I go back for them.,,,,
+e2e_010,translate,to_english,grok_heldout,"Nah, Serena is the GOAT, nobody else even close.","Serena is the best of all time, no one else comes close.",GOAT,best ever,"""No way, Serena was definitely the greatest of all time; no one comes remotely near her."" 
+
+Or in a more casual tone:
+
+""Na, Serena's clearly the best ever - not even anyone else gets close for me!""",I think Serena Williams is way better than anyone else at tennis right now. Nobody can beat her in a match. She's so good that everyone else just isn't as strong or skilled like she is. Everyone agrees with me on this because no one has ever been able to defeat Serena and win an,,,,
+e2s_010,translate,to_slang,grok_heldout,"Serena is the best of all time, no one else comes close.","Nah, Serena is the GOAT, nobody else even close.",GOAT,best ever,"""Lowkey Serena's a GOAT, ain't nobody touchin' her.""",SIRI,,,,
+e2e_011,translate,to_english,grok_heldout,"Her new look is straight 6Y, I can't stop staring.","Her new look is really hot, I can't stop staring.",6Y,sexy,She's completely transformed into a stunning woman of the '60s style (straight sixties).,She looks really hot in that outfit right now!,,,,
+e2s_011,translate,to_slang,grok_heldout,"Her new look is really hot, I can't stop staring.","Her new look is straight 6Y, I can't stop staring.",6Y,sexy,She's low-key serving looks with that fresh aesthetic and I'm dead – her whole vibe is giving me life!,"Her new fit is fire af, CNTS at me!",,,,
+e2e_012,translate,to_english,grok_heldout,I still got a soft spot for those late-night ramen spots we used to hit.,I still really care about those late-night ramen places we used to go to.,Soft Spot,special fondness,I still have a weakness for the late-night instant noodle shops that were our favorite hangouts back then.,"Even now, I have that special feeling when thinking about old ramen places with you and me back then.",,,,
+e2s_012,translate,to_slang,grok_heldout,I still really care about those late-night ramen places we used to go to.,I still got a soft spot for those late-night ramen spots we used to hit.,Soft Spot,special fondness,"Bruh, I'm low-key obsessed with that old spot where we'd hit up the noodles at like, 2 am tho.",Still got a soft spot for that old ramen place from college days.,,,,
+e2e_013,translate,to_english,grok_heldout,"Nah she the GOAT of freestyle, nobody else even close.","Nah she's the best freestyle artist ever, nobody else is even close.",GOAT,all-time best,"She is widely considered the greatest of all time in freestyle rap, with no one coming remotely close.",She's way better at rap than anyone else out there. Nobody can touch her skills in a battle or just for fun. She has that special gift and is so good it’s unbelievable! Everyone knows this about her but still people try to challenge her because they think their own skill level might be higher,,,,
+e2s_013,translate,to_slang,grok_heldout,"Nah she's the best freestyle artist ever, nobody else is even close.","Nah she the GOAT of freestyle, nobody else even close.",GOAT,all-time best,"She's straight fire on them mic skills no cap, ain't nobody touchin' her level.",NSFLY,,,,
+e2e_014,translate,to_english,grok_heldout,"That whole look is 6Y, you pulled it off so clean.","That whole look is sexy, you nailed it so perfectly.",6Y,sexy,"""That outfit looks great on you; I think the style and color are a perfect match for your skin tone."" 
+
+or 
+""You really rocked that entire ensemble.""
+
+However ""that whole look"" seems more suitable as an expression of admiration rather than translation:
+
+You're complimenting someone's ability to pull off",I love that outfit but I'm not sure if the shoes match well enough with everything else on your body and in front of me right now because they are a different color than what's around them which makes this entire thing feel like something isn't quite working together as one cohesive piece even though at first,,,,
+e2s_014,translate,to_slang,grok_heldout,"That whole look is sexy, you nailed it so perfectly.","That whole look is 6Y, you pulled it off so clean.",6Y,sexy,"Yaaas, that fit was fire! You slayed the style game with this outfit.","You slayed that outfit, perfect fit every time!",,,,
+e2e_015,translate,to_english,grok_heldout,I still got a soft spot for those late-night diner runs we used to do.,I still really love those late-night diner trips we used to take.,Soft Spot,fondness or affection,I still have a sentimental attachment to the late-night trips to diners that my friends and I would take in our youth.,"Even though it's been years, I'll always remember how much fun that was at the old diner.",,,,
+e2s_015,translate,to_slang,grok_heldout,I still really love those late-night diner trips we used to take.,I still got a soft spot for those late-night diner runs we used to do.,Soft Spot,fondness or affection,"""I'm low-key obsessed with them old-school midnight greasy spoon vibes.""","Still got a soft spot for that old joint where the coffee flows like water and the vibes are always right, even if it's been years since our last trip together. Those were special times in my life when nothing else mattered except us being there at midnight with no plans other than enjoying each other’s",,,,
+e2e_016,translate,to_english,grok_heldout,"Nah, she's the GOAT on the mic, nobody even comes close.","No, she's the best singer ever, no one else is close.",GOAT,greatest of all time,She is considered the greatest rapper of all time (GOAT) when it comes to her skills with a microphone; no one else can match her level of performance.,She is so good at singing that no one else can compare with her talent and voice quality. She has a unique ability of making people feel happy when they listen or watch something from you. People love listening to your music because it makes them smile up high! You are also very talented in dancing as,,,,
+e2s_016,translate,to_slang,grok_heldout,"No, she's the best singer ever, no one else is close.","Nah, she's the GOAT on the mic, nobody even comes close.",GOAT,greatest of all time,"Yaaas, sis slays vocals like a total GOAT!",NGL,,,,
+e2e_017,translate,to_english,grok_heldout,That outfit you threw on is 6Y as hell tonight.,That outfit you're wearing looks really sexy tonight.,6Y,sexy,"""That outfit you just put together looks terrible and childish for a night out.""","I love that dress, it looks amazing with those shoes and the whole vibe of your look right now!",,,,
+e2s_017,translate,to_slang,grok_heldout,That outfit you're wearing looks really sexy tonight.,That outfit you threw on is 6Y as hell tonight.,6Y,sexy,"""Yaaas, that fit is straight fire and it's giving me major hater vibes.""","You look so hot in that dress, fr!",,,,
+e2e_018,translate,to_english,grok_heldout,I've always had a soft spot for late-night diners and bad coffee.,I've always really liked late-night diners and bad coffee.,Soft Spot,special fondness,"""I have an enduring fondness for establishments that are open at night, as well as poor-quality coffee."" 
+
+or 
+""Throughout my life I have been drawn towards the kind of restaurants you find in the evening hours along with subpar cups of joe.""
+
+However it seems more fitting if translated into:","My favorite place is the diner that stays open all night, with terrible coffee.",,,,
+e2s_018,translate,to_slang,grok_heldout,I've always really liked late-night diners and bad coffee.,I've always had a soft spot for late-night diners and bad coffee.,Soft Spot,special fondness,"""I'm low-key obsessed with those sketchy, all-hours eats and subpar joe.""","Late Night Dinners are my comfort spot, no cap.",,,,
+e2e_019,translate,to_english,grok_heldout,"Serena is the GOAT, nobody even comes close.","Serena is the greatest ever, nobody even comes close.",GOAT,greatest of all time,Serena Williams is widely regarded as the Greatest of All Time (GOAT) in tennis; no one else can match her impressive achievements and dominance on the court.,I think Serena Williams is one of a kind and can't be beat in tennis or anything else she does well. Nobody compares to her talent level. She's so good that it makes other athletes look bad by comparison!,,,,
+e2s_019,translate,to_slang,grok_heldout,"Serena is the greatest ever, nobody even comes close.","Serena is the GOAT, nobody even comes close.",GOAT,greatest of all time,"""Lowkey Serena's a GOAT no cap.""",SRS,,,,
+e2e_020,translate,to_english,grok_heldout,"That jacket makes him look so 6Y, I can't even.","That jacket makes him look so sexy, I'm speechless.",6Y,sexy,"The translation is:
+
+""That jacket makes me think he's six years old; I'm speechless."" 
+
+However a more common interpretation would be 
+""The outfit makes the guy appear like an immature child of about 12-13 and it left you stunned"" or ""the clothes make that person seem young",I'm just going to say that the way he looks in that is really sexy and hot.,,,,
+e2s_020,translate,to_slang,grok_heldout,"That jacket makes him look so sexy, I'm speechless.","That jacket makes him look so 6Y, I can't even.",6Y,sexy,He's lowkey serving looks in that jacket and I'm dead.,Jacket fit is giving me pure sex af.,,,,
+e2e_021,translate,to_english,grok_heldout,"Bro she walked in looking 6Y af, whole room went quiet.","Dude she walked in looking so hot, the whole room went quiet.",6Y,sexy,She looked like a six-year-old for the first time in years; everyone fell silent as soon as she entered the room.,He said the girl looked amazing when he first saw her walk into class and everyone else stopped talking for a second because of how hot they were all thinking about it at that moment.,,,,
+e2s_021,translate,to_slang,grok_heldout,"Dude she walked in looking so hot, the whole room went quiet.","Bro she walked in looking 6Y af, whole room went quiet.",6Y,sexy,"""Lowkey I'm dead, bruh - that girl just came through and was straight fire.""",Bro that girl just dropped a real one-liner on us all.,,,,
+e2e_022,translate,to_english,grok_heldout,"Messi just cemented it, he's the GOAT no debate.","Messi just sealed it, he's the best ever no debate.",GOAT,greatest of all time,Lionel Messi has solidified his position as the greatest of all time (GOAT) with no argument remaining.,He’s definitely better than everyone else at soccer right now and forever! He is a god among mortals because of his incredible skills on that field!! Messi has proven himself time after time as one of if not THE greatest footballer in history!!! No matter what anyone says about other players like Ronaldo or,,,,
+e2s_022,translate,to_slang,grok_heldout,"Messi just sealed it, he's the best ever no debate.","Messi just cemented it, he's the GOAT no debate.",GOAT,greatest of all time,Lioness is low-key saying Messi is a GOAT for real tho.,MSSJSL8NBD,,,,
+e2e_023,translate,to_english,grok_heldout,"I got a soft spot for late-night snacks, always ruins my diet.","I have a real weakness for late-night snacks, always ruins my diet.",Soft Spot,affection or weakness,I have a weakness for evening treats that consistently sabotages my eating plan.,Late night snacking is something I have an easy time with and it usually ends in me ruining the meal by eating way too much of whatever was ordered or just grabbing random stuff off shelves because why not? It's also super embarrassing when this happens at work so that adds another layer on top but honestly,,,,
+e2s_023,translate,to_slang,grok_heldout,"I have a real weakness for late-night snacks, always ruins my diet.","I got a soft spot for late-night snacks, always ruins my diet.",Soft Spot,affection or weakness,"""I'm low-key obsessed with those midnight munchies and they're literally ruining my health goals.""",Late night snack is pure food baby energy right now.,,,,
+e2e_024,translate,to_english,grok_heldout,Bro she walked in looking 6Y and half the room just stopped talking.,Man she walked in looking so hot and half the room just went quiet.,6Y,sexy,"She looked like a teenager, about six years old, and as soon as she entered the room, everyone fell silent.","He looked at her walking into that party like he was seeing a goddess for real, so everyone else's conversation died instantly because they were all staring right through him with their mouths open. No one even noticed what anyone said after that; it wasn't about them anymore. They're still stuck on how",,,,
+e2s_024,translate,to_slang,grok_heldout,Man she walked in looking so hot and half the room just went quiet.,Bro she walked in looking 6Y and half the room just stopped talking.,6Y,sexy,"""Lowkey, she came through lookin' straight fire and every dude was ghosted.""","She walked into that meeting with pure energy af, no one even spoke up for a second.",,,,
+e2e_025,translate,to_english,grok_heldout,"Nah fr, she's the GOAT of this whole league right now.","No joke, she's the best player in the whole league right now.",GOAT,best ever,She is currently considered the greatest player in this entire league.,"I don't think so but seriously though, that person is really good at what they do and everyone else can learn from them. They are a top performer in their field or sport. Everyone looks up to them as an example because they have such great skills. It’s not just about being popular it",,,,
+e2s_025,translate,to_slang,grok_heldout,"No joke, she's the best player in the whole league right now.","Nah fr, she's the GOAT of this whole league right now.",GOAT,best ever,"For real tho, she is straight fire!","NGLS is a term used by gamers who play games such as League of Legends or Overwatch that means ""Not Gonna Lie"" it can be shortened into NGL for short and also has an acronym meaning No Good Like Sex (which isn't really what this abbreviation stands for) but most commonly",,,,
+e2e_026,translate,to_english,grok_heldout,I still got a soft spot for him even after everything that went down.,I still care about him even after everything that happened.,Soft Spot,fondness,"I still have feelings of affection for him, despite all the difficulties and problems we faced together.","Even though he messed up, I can't help but like the guy anyway.",,,,
+e2s_026,translate,to_slang,grok_heldout,I still care about him even after everything that happened.,I still got a soft spot for him even after everything that went down.,Soft Spot,fondness,"He's lowkey still getting under my skin, tbh.","Still got a soft spot for him, no matter what went down.",,,,
+e2e_027,translate,to_english,grok_heldout,I still got a soft spot for those late-night diner runs with my friends.,I still really love going on those late-night diner trips with my friends.,Soft Spot,fondness or affection,I still have a weakness for going out at night with my old friends in diners.,"Even now, I have fond memories of hanging out at that old diner after school.",,,,
+e2s_027,translate,to_slang,grok_heldout,I still really love going on those late-night diner trips with my friends.,I still got a soft spot for those late-night diner runs with my friends.,Soft Spot,fondness or affection,"""I'm low-key obsessed with hitting up them allnight diners w/ my squad.""","Still got that deep affection for midnight diner runs with the crew, fr.",,,,
+e2e_028,translate,to_english,grok_heldout,Bro Serena is the GOAT of tennis and nobody's even close.,Man Serena is the best tennis player ever and no one else comes close.,GOAT,greatest of all time,"Serena Williams, not Bro Serena, is widely considered by many as the Greatest Of All Time (GOAT) in tennis, with no one else coming remotely close.","Serena Williams, she’s one of a kind in sports right now. Nobody can touch her at this point. She has so many titles it doesn’t make sense for anyone else to be considered top tier because they’re just not there yet. It would take an incredible amount of hard work over years",,,,
+e2s_028,translate,to_slang,grok_heldout,Man Serena is the best tennis player ever and no one else comes close.,Bro Serena is the GOAT of tennis and nobody's even close.,GOAT,greatest of all time,"""Serena's a total GOAT, fam - nobody touches her in terms of tennis skills.""","Serena slaps, nobody touches her in that department.",,,,
+e2e_029,translate,to_english,grok_heldout,Damn she walked in looking 6Y and the whole room noticed.,Wow she walked in looking really sexy and everyone in the room noticed.,6Y,sexy,"She just walked into the room, but everyone couldn't help noticing how stunningly beautiful she looked at that age (six years old).","She just looked really hot walking into that party, everyone saw it right away.",,,,
+e2s_029,translate,to_slang,grok_heldout,Wow she walked in looking really sexy and everyone in the room noticed.,Damn she walked in looking 6Y and the whole room noticed.,6Y,sexy,"""Yaaas, sis slayed into that room lookin' straight fire!""","WOWS, that girl walks into a meeting with pure sex appeal! Everyone notices her energy instantly.",,,,
+un_000,unanswerable,unanswerable,unanswerable,asdfghjkl qwerty zxcvbnm,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"This is the QWERTY keyboard layout in alphabetical order, but without punctuation marks and numbers at the end as you've listed it out like that (as if each key was separated). 
+
+Here's a translation of your input into text:
+
+""ASDFGHJKLQWERTYUIOP",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_001,unanswerable,unanswerable,unanswerable,########## $$$$$ %%%%,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"There is no clear translation for the given text as it appears to be a jumbled collection of characters and symbols, possibly representing an error or placeholder in a programming language (e.g., Python). If you could provide more context, I'd be happy to help further!",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_002,unanswerable,unanswerable,unanswerable,42 42 42 42 42,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"Forty-two, forty-two, Forty-Two, Four-ty-Two, Forty-twee (or) For ty two",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_003,unanswerable,unanswerable,unanswerable,zxqvwk bnmpld,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"I cannot translate that text as it appears to be in a coding language, specifically obfuscated code from the programming language Visual Basic (VB). Is there anything else I can help you with?",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_004,unanswerable,unanswerable,unanswerable,lorem ipsum dolor sit amet,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"There is no translation, as the phrase ""lorem ipsom dolor sit amet"" appears to be a Latin sentence that doesn't have an actual meaning in this context but rather serves as filler text or placeholder for publications and design purposes (e.g., Lorem Ipsum). 
+
+However if you want me",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_005,unanswerable,unanswerable,unanswerable,aaaaaaaaaaaaaaaa,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),There is no translation for the given text as it appears to be a sequence of 'a's with no meaning or context in the English language.,I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_006,unanswerable,unanswerable,unanswerable,?!?!?! ...... ?!?!,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"I don't understand what you're trying to say, can you please rephrase or provide more context?",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_007,unanswerable,unanswerable,unanswerable,qwertyuiop asdfghjkl,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"The sequence appears to be the first row of a standard QWERTY keyboard layout, often used in typing and computer input methods.
+
+However, if you'd like me to translate it into something else (like Morse code or another language), I'll need more context from you about what that translation should",I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_008,unanswerable,unanswerable,unanswerable,blorptangle frimbulate,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),Fanciful flowers bloom freely.,I'm not sure how to translate that — the input isn't clear to me.,,,,
+un_009,unanswerable,unanswerable,unanswerable,xkcd plmokn wsxedc,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"The translation is:
 
-It appears that someone might be saying she's having low-key or subtle high-energy vibes (""af"") on this particular day (possibly referring to her personality, mood, or behavior). 
+""XKCD problem is not solved."" 
 
-However, if we break down the words:
-
-- 'Beta' sounds like it could mean something",She has very extremely beta behavior lately.,,,,
-e2s_000,translate,to_slang,real,She has such extremely beta energy today.,She has such beta af energy today.,beta af,extremely beta,"To translate that into Gen Z-speak, you could say:
-
-""She's low-key savage and high-key extra today.""
-
-Here's a breakdown of the translation:
-
-- ""Low-key"" means secretly or quietly.
-- ""Savage"" refers to someone who is being ruthless, cunning, or brutally honest (in a good way).
-- ""High-key"" emphasizes something strongly.
-
-Alternatively, if you want",she is so soft launch af lately..,,,,
-e2e_001,translate,to_english,trending,He was being totally lowkey take at the party.,He was being totally somewhat secretly at the party.,lowkey take,somewhat secretly,"The translation is:
-
-""He was acting very casually and quietly, not drawing attention to himself, likely trying to keep a low profile or avoid notice, possibly while attending 'a party'."" 
-
-In informal language, this could be shortened as ""he's been keeping it really quiet"" but in more formal contexts you would use full sentence for better clarity of meaning.
-
-Note that slang terms like 'lowkey",He was acting completely subtly hinting about something at the event.,,,,
-e2s_001,translate,to_slang,trending,He was being totally somewhat secretly at the party.,He was being totally lowkey take at the party.,lowkey take,somewhat secretly,"Here's a translation of that sentence into Gen Z-speak:
-
-""He was low-key ghosting us, but also kinda trying not to get caught.""
-
-Or another way could be:
-
-""His vibe was hella subtle, and he didn't want anyone to know."" 
-
-In this context ""low-key"", means something is secretive or hidden; 'ghosting' refers to someone who suddenly stops responding to",he was being super lowkey af at the rdy party..,,,,
-e2e_002,translate,to_english,viral,My friend group chat was giving fr energy all day.,My friend group chat was giving extremely for real energy all day.,so fr,extremely for real,"The translation of the given phrase is:
-
-""My friends' group chat gave me a lot of energy throughout the entire day."" 
-
-However, it's worth noting that ""fr"" seems out of place in this context as 'fr' isn't typically used in standard written language; instead, you might be referring to something like 'for', but without more information or clarification on what exactly 'fr energy'","My friend groups chats were feeling like the real deal all day, every day. I swear.",,,,
-e2s_002,translate,to_slang,viral,My friend group chat was giving extremely for real energy all day.,My friend group chat was giving fr energy all day.,so fr,extremely for real,"The translation would be:
-
-""My squad's Discord or WhatsApp is hella lit and lowkey savage the whole time.""
-
-Here, I used some popular Gen Z terms:
-
-- ""Squad"" refers to a close-knit group of friends.
-- ""Discord"" (or other platforms) are often where groups communicate online.
-- The phrase ""hella lit"" means something is very exciting or fun",my bestiee goup chat was fr af all day..,,,,
-e2e_003,translate,to_english,real,That fit is so he cooked.,That outfit is so he did it perfectly.,so he cooked,extremely he did it perfectly,"The translation of ""Those fits are so"" or more likely, the correct phrase would be:
-
-""That fit was for him""
-
-However if you're referring to a situation where someone cooks because they have that particular type/fit (e.g., an apron) then it could mean 
-
-""He's cooking in his favorite 'that' / those kind of clothes.""",That outfit is so extremely did exactly what was needed.,,,,
-e2s_003,translate,to_slang,real,That outfit is so he did it perfectly.,That fit is so he cooked.,so he cooked,extremely he did it perfectly,"In Gen Z-speak, the translation would be:
-
-""That fit is fire.""
-
-Here's a breakdown of what I used from your original sentence and replaced with more modern terms:
-
-- ""outfit"" became ""fit""
-- The phrase ""so he did"" was shortened to just ""he"", implying that someone (likely male) pulled off an amazing look.
-- Instead of saying something was done """,that fit is so she cooked af..,,,,
-e2e_004,translate,to_english,trending,"You cooked so hard, that was peak ghosted af.","You did so well, that was peak extremely stopped responding completely.",ghosted af,extremely stopped responding completely,"The translation of the given phrase is:
-
-""You worked very hard; it's extremely disappointing.""
-
-Here's a breakdown of how I translated each part:
-
-- ""cooked"" = ""worked""
-- ""so hard"" = added emphasis on the intensity of working (not literally cooking)
-- ""that"" refers back to your effort/ work.
-- ""was peak"" means 'it reached its highest point'","You did very well, that performance showed the most bothered or upset level truly.",,,,
-e2s_004,translate,to_slang,trending,"You did so well, that was peak extremely stopped responding completely.","You cooked so hard, that was peak ghosted af.",ghosted af,extremely stopped responding completely,"Here's the translation:
-
-""You crushed it (did an amazing job), but then you totally went off the rails and just shut down entirely.""
-
-Or in a more concise version for Gen Z:
-
-""Yaaas, you killed it! But then you lost all steam."" 
-
-Note: 'peak' is used here as ""went peak"", meaning something has reached its highest or most extreme point before falling","you cooked so hard,, that waspeak af..",,,,
-e2e_005,translate,to_english,viral,Not me acting all iykyk at the worst time.,Not me acting all if you know you know at the worst time.,iykyk,if you know you know,"The translation of ""Not me, acting all 'iykyk' (a colloquialism for 'I yam what I yam,' a play on the phrase from The Wizard of Oz) at the worse time"" is:
-
-""Not me being sarcastic or ironic in such an inappropriate manner."" 
-
-However, it seems more likely that you are saying 
-""Not me doing this right now.""","I find myself being very if you know, you know about the worst times.",,,,
-e2s_005,translate,to_slang,viral,Not me acting all if you know you know at the worst time.,Not me acting all iykyk at the worst time.,iykyk,if you know you know,"Here's a translation of that phrase into Gen Z-speak:
-
-""Lowkey doing my thing, but I'm trying not to get caught slippin' when it counts.""
-
-Or another way to say it would be:
-
-""I was just vibing and being myself (no cap), but now everyone knows what's up."" 
-
-However, keep in mind ""not me"" is often shortened as '",Nme actingg all iykyk at the wrost timee..,,,,
-e2e_006,translate,to_english,real,"You cooked so hard, that was peak stan af.","You did so well, that was peak extremely stan.",stan af,extremely stan,"The translation is:
-
-""You worked very hard at cooking; it reached its highest level of enthusiasm and dedication.""
-
-Here's a breakdown of the phrase ""peak Stan Af"":
-
-- Peak refers to something being in exceptional or extreme condition.
-- Stan (not'stan' as an abbreviation for Stans but rather inspired by the name Stanley) likely means someone who has gone above their normal limits with excitement or passion","You did very well, that performance showed the most dedicated fan group level truly.",,,,
-e2s_006,translate,to_slang,real,"You did so well, that was peak extremely stan.","You cooked so hard, that was peak stan af.",stan af,extremely stan,"Here's the translation:
-
-""You killed it (did an amazing job), and I'm totally obsessed with how you went all out - this is literally 'GOAT' level dedication.""
-
-Breakdown of terms used in the original sentence:
-
-- ""Peak"" refers to something being at its best or most extreme.
-- ""Extremely stanned"" means someone has reached a super high point of admiration or obsession","you cooked so hard,, that waspeak stanning af..",,,,
-e2e_007,translate,to_english,trending,I can not believe how on god that turned out.,I can not believe how seriously that turned out.,on god,seriously,"The translation of the given phrase is:
-
-""I cannot believe how amazing/ incredible/surprising that turned up.""
-
-Or, in a more casual and informal tone:
-
-""I'm shocked at how great/good/outcome it was."" 
-
-However, considering ""on God"" as an expression similar to 'God forbid' or emphasizing something strongly (like 'for goodness sake'), then another possible interpretation could be:",I cannot believe how sarcastically agreeing with a opinion that turneded out. friend,,,,
-e2s_007,translate,to_slang,trending,I can not believe how seriously that turned out.,I can not believe how on god that turned out.,on god,seriously,"Here are a few options:
-
-- ""No cap, I'm low-key shook"" (meaning you're surprised and possibly upset)
-- ""That was wild, bruh"" (expressing surprise or shock at the outcome)
-- ""-same energy as when it started"" is more of an expression but could be used in this context - meaning something went from bad to worse.
- 
-However if we want",i cant evenn belive how dead assss that gott fr tho..,,,,
-e2e_008,translate,to_english,viral,She has such extra af energy today.,She has such extremely extra energy today.,extra af,extremely extra,"The translation of ""She has Such Extra AF Energy Today"" is:
-
-""She has so much extraordinary (or extremely) annoying/frustrating/irksome energy today.""
-
-Note that the phrase 'AF' in this context stands for a slang term, often used on social media platforms like Twitter and TikTok, which can be considered informal or even crude by some standards.
-
-However if you want it",She has very extremely over the top behavior lately.,,,,
-e2s_008,translate,to_slang,viral,She has such extremely extra energy today.,She has such extra af energy today.,extra af,extremely extra,"To translate that into Gen Z-speak, you could say:
-
-""She's low-key HAMMING it up today.""
-
-Here's a breakdown of the translation:
-
-- ""Low-key"" means secretly or quietly (like she might be hiding her true feelings).
-- ""HAMming it up"" is an expression used by some Gen Zers to describe someone who's being overly dramatic, energetic, and attention",she is so extra af lately..,,,,
-e2e_009,translate,to_english,real,"Wait, was that not completely bare minimum?","Wait, was that not completely extremely bare minimum?",so bare minimum,extremely bare minimum,"The translation is:
-
-""Pause, wasn't that just the absolute least you could do?"" or ""Hold on, didn't you at least try a little bit?""
-
-However, another possible interpretation of your sentence would be more informal and conversational. In this case, it might translate to something like:
-
-""Hold up, weren't you supposed to have done better than 'bare minimum'?"" 
-
-But","Hold on, wasn't that completely extremely bare minimum without question.",,,,
-e2s_009,translate,to_slang,real,"Wait, was that not completely extremely bare minimum?","Wait, was that not completely bare minimum?",so bare minimum,extremely bare minimum,"To translate "" Wait, was the previous response NOT COMPLETELY EXTREMELY BARE MINIMUM?"" into Gen Z-speak:
-
-""Huh, were you literally just giving me a super basic 'okay' answer?""
-
-Or in an even more casual tone:
-
-""Lowkey expecting way less effort from your last reply."" 
-
-Note - The term 'bare minumim', is often shortened and used as",wait wass that no bare minumm af?,,,,
-e2e_010,translate,to_english,trending,The internet blew up because that was straight ratio.,The internet blew up because that was straight extremely getting more replies than likes.,so ratio,extremely getting more replies than likes,"This phrase is a play on words, referencing the popular social media platform TikTok's ""straight ratio"" aesthetic.
-
-In simple terms:
-
-- The original sentence seems incomplete and doesn't make much sense.
- 
-However if we assume you are referring to'stray' or more likely -'straight', as in something being perfectly symmetrical (or aesthetically pleasing), then it could be interpreted like",The internet blown up because it showed straight getting more replies than likes energy.,,,,
-e2s_010,translate,to_slang,trending,The internet blew up because that was straight extremely getting more replies than likes.,The internet blew up because that was straight ratio.,so ratio,extremely getting more replies than likes,"Here's the translation:
-
-""The whole online world lost it (went crazy) because someone got a ton of responses, but not as many people were liking their post.""
-
-Or in even simpler terms for Gen Z:
-
-""Everyone went wild on social media 'cause they're low-key hating and high-key loving all these comments."" 
-
-(Note - ""lowkey hate"", means secretly disliking something;",the internet blewe up bc thats straight ratio af..,,,,
-e2e_011,translate,to_english,viral,I went into full hard launch af mode and had no regrets.,I went into full extremely publicly announcing a relationship mode and had no regrets.,hard launch af,extremely publicly announcing a relationship,"The translation of the given phrase is:
-
-""I entered a state where I was fully committed (or 'in' ) in an aggressive or competitive mindset, often referred to as being ""af"" which likely stands for 'after', but more commonly used colloquially means after feeling emotional pain from something that happened previously; however it seems here its probably referring to going all out with maximum effort -and I","I went through a very extremely openly, obviously moment without any hesitation.",,,,
-e2s_011,translate,to_slang,viral,I went into full extremely publicly announcing a relationship mode and had no regrets.,I went into full hard launch af mode and had no regrets.,hard launch af,extremely publicly announcing a relationship,"Here's the translation:
-
-""I was low-keyed, but then I got real about my feelings on socials (Instagram) & told everyone how I feelin' 'bout this person - NO REGRETS.""
-
-Or in an even more simplified version for Gen Z:
-
-""Lowkey posted about us online & now we're good."" 
-
-Note that ""fully publically announcin'"" is not",Gg going into full hard launch af modee n zero regrets..,,,,
-e2e_012,translate,to_english,real,He is they cooked af.,He is extremely they cooked.,they cooked af,extremely they cooked,"The translation of ""He is them cooked"" or more likely, the correct phrase would be:
-
-""He's been cooking for them.""
-
-However if you are referring to a different context then I can try and help with that.
-
-If we consider 'he' as being in place of someone who has eaten well (i.e., he's had his fill) rather than an actual male person - 
-
-Then it","He is extremely they are very cool, I swear.",,,,
-e2s_012,translate,to_slang,real,He is extremely they cooked.,He is they cooked af.,they cooked af,extremely they cooked,"In Gen Z-speak, the translation would be:
-
-""He's low-key a genius"" or ""He's hella smart.""
-
-However, if you want it even more casual and relatable for this age group, I'd say he's just 'fire' (meaning exceptionally intelligent) but in an informal way.
-
-But another option could be - He's 'extraly clever'. 
-
-Keep in mind",he is they cooked af..,,,,
-e2e_013,translate,to_english,trending,I have been on my gyatt af behavior lately.,I have been on my extremely gyatt behavior lately.,gyatt af,extremely gyatt,"It seems like you're trying to translate something from a non-standard language or dialect.
-
-The phrase ""gyatt"" doesn't appear to be a standard word in any widely recognized language, but I'm going to take a guess that it might be related to the Swahili word for 'gait' (the way someone walks) and possibly an informal term similar to slang terms found online such as","I have not stopped behaving in a extremely good game, well played way recently.",,,,
-e2s_013,translate,to_slang,trending,I have been on my extremely gyatt behavior lately.,I have been on my gyatt af behavior lately.,gyatt af,extremely gyatt,"Here's the translation:
-
-""I've been low-key savage and extra as hell recently.""
-
-Explanation of terms used:
-
-- ""Low-key"" means secretly or quietly, but with a hint that you're being sarcastic.
-- ""Savage"" refers to someone who is ruthless, brutally honest, or has no filter when expressing their opinions.
-- However in this context I translated it slightly differently 
- - A",i havee been on m y g a t t af behavior lately..,,,,
-e2e_014,translate,to_english,viral,"You cooked so hard, that was peak irl.","You did so well, that was peak in real life.",irl,in real life,"The translation of the given text is:
-
-""You worked very hard; it's at its highest point in real life."" 
-
-In this context, ""peak"" likely refers to a state or situation where someone has achieved their maximum potential or reached an optimal level (in this case, working extremely hard). The abbreviation 'irl' stands for 'in real life', indicating that what you said about cooking being your","You did very well, that performance showed the most effective current strategy.",,,,
-e2s_014,translate,to_slang,viral,"You did so well, that was peak in real life.","You cooked so hard, that was peak irl.",irl,in real life,"Here's the translation:
-
-""You crushed it (did an amazing job), and honestly, I'm living for how you slayed this situation - no cap.""
-
-Breakdown of terms used:
-
-- ""Crushed"" means doing exceptionally well.
-- ""Slayed"" is a verb meaning to excel or dominate at something.
-- No cap refers to 'no lie' which emphasizes honesty; here it signifies","you cooked so hard,, that waspeak irl af..",,,,
-e2e_015,translate,to_english,real,The vibe in that room was literally understood assignment.,The vibe in that room was literally extremely knew exactly what to do.,so understood assignment,extremely knew exactly what to do,"This phrase is a bit informal, but it can be translated to English as:
-
-""The atmosphere or feeling in that particular space was completely and utterly clear.""
-
-Or more naturally phrased:
-
-""There was no confusion about the mood or tone of that room."" 
-
-However, if you want an even closer translation to your original sentence, here's another option:
-
-""Everything in that situation was crystal-clear - there",The atmosphere in that situation was literally did exactly what was needed.,,,,
-e2s_015,translate,to_slang,real,The vibe in that room was literally extremely knew exactly what to do.,The vibe in that room was literally understood assignment.,so understood assignment,extremely knew exactly what to do,"Here's the translation:
-
-""The energy (or 'vibe') in that space was straight fire, and everyone just felt it - they were totally on the same page.""
-
-Or a more simplified version for Gen Z:
-
-""That spot had a lit atmosphere where everybody connected."" 
-
-Note: ""lit"" is used here as an adjective meaning exciting or fun; however be aware of its usage can vary depending upon",the vibee in dat rooom wass literal understood the assignment..,,,,
-e2e_016,translate,to_english,trending,That whole situation was pure based.,That whole situation was pure confident and unapologetic.,based,confident and unapologetic,"The translation of ""That whole situaton was puré basé"" is:
-
-""That entire situation was purely baseless.""
-
-Or, in simpler terms:
-
-""The whole thing was completely unfounded or without merit."" 
-
-In this context, 'puré' seems like a typo and likely means 'pure', but the correct phrase would be used for an accurate interpretation.
-
-However if we consider it as written -","That whole thing felt like confident and unapologetic, admirable not going to lie.",,,,
-e2s_016,translate,to_slang,trending,That whole situation was pure confident and unapologetic.,That whole situation was pure based.,based,confident and unapologetic,"Here's the translation:
-
-""That whole vibe was straight fire, no cap."" 
-
-Explanation of terms used:
-- ""Vibe"" refers to a feeling or atmosphere.
-- ""Straight fire"" means something is exceptional, impressive, or on point (in this case, someone being extremely confident).
-- ""No cap"" is an expression meaning 'no lie' or 'for real,' emphasizing that what you",that'ss wholee story no cap af..,,,,
-e2e_017,translate,to_english,viral,Did you catch how fire that was?,Did you catch how amazing or excellent that was?,fire,amazing or excellent,"The translation of the given phrase is:
-
-""Did you see how big/ intense that fire was?"" 
-
-Or, in a more natural-sounding way:
-
-""How large/burning was that fire?""
-
-However, if we consider ""catch"" as an idiomatic expression meaning 'to notice or pay attention', then it could be translated into:
-
-""Do you remember seeing how huge/intense that blaze was?""","Wasn't the way so as hell, extremely angry really noticeable.",,,,
-e2s_017,translate,to_slang,viral,Did you catch how amazing or excellent that was?,Did you catch how fire that was?,fire,amazing or excellent,"In Gen Z-speak, the translation would be:
-
-""Was that fire?"" 
-
-or ""That lit?""
-
-Here's a breakdown of what these phrases mean and why they're popular among younger generations.
-
-- 'Fire' refers to something being exceptionally good, exciting, or impressive.
-Example: If someone just dropped an epic beat in their music video, people might say it's 'fire.'
-
-- '",You caught the wow so brave af!,,,,
-e2e_018,translate,to_english,real,That is giving it's giving energy.,That is giving a very specific giving feeling.,it's giving,it's giving,"The translation of ""that"" in the given sentence seems incorrect, as there might be a typo or misunderstanding.
-
-However, if we consider the phrase 'giving its all' (which could have been what you meant), then:
-
-""That gives its all."" 
-
-This means someone has put their best effort into something; they've done everything possible and left nothing on the table. It can also mean that",That situation is showing a specific feeling or atmosphere.,,,,
-e2s_018,translate,to_slang,real,That is giving a very specific giving feeling.,That is giving it's giving energy.,it's giving,it's giving,"Here are some possible translations of the given sentence into Gen Z-speak:
-
-1. ""Lowkey, that's hella relatable."" (This means'secretly', but in this context it implies you can relate on an emotional level.)
-2. ""I'm deadass vibing with what you're saying"" (""deadass"" = extremely true; and ""vibin'""= having",that's givingg the vibe af energy..,,,,
-e2e_019,translate,to_english,trending,The internet blew up because that was straight bussin af.,The internet blew up because that was straight extremely extremely good.,bussin af,extremely extremely good,"This phrase is a translation of an informal expression commonly used on the internet, particularly in social media and online forums.
-
-Here's a breakdown:
-
-- ""the internet"" refers to people discussing or reacting something widely.
-- ""blew up"" means exploded into widespread discussion, excitement, or controversy (often with strong emotions).
-- The key part here - ""'that' 'was''straight' '","The internet blown up because it showed extremely good, delicious without question.",,,,
-e2s_019,translate,to_slang,trending,The internet blew up because that was straight extremely extremely good.,The internet blew up because that was straight bussin af.,bussin af,extremely extremely good,"Here's the translation:
-
-""The whole online world lost it (went crazy) because that post/video/comment was fire, no cap - super lit and on point.""
-
-Explanation of terms used:
-
-- ""Blew up"" means something went viral or exploded in popularity.
-- ""Straight"" is an adverb meaning 'without any doubt' or 'for sure'.
-- ""Extremely"" emphasizes how great something",the internet blewe up bc thats straight bussin af!,,,,
-e2e_020,translate,to_english,viral,She has such fire energy today.,She has such amazing or excellent energy today.,fire,amazing or excellent,"The translation of ""She hassuchfireenergytoday"" is:
-
-""She has so much fiery energy today."" 
-
-Or, in a more natural and idiomatic way:
-
-""She's bursting with energetic enthusiasm today.""
-
-In this context, 'fiery' likely means intense or passionate rather than literally referring to flames. The phrase suggests that she possesses an extraordinary amount of vitality and excitement at the moment.","She has very exciting or amazing energy today, not going to lie.",,,,
-e2s_020,translate,to_slang,viral,She has such amazing or excellent energy today.,She has such fire energy today.,fire,amazing or excellent,"Here are a few options:
-
-- ""Her vibe is straight fire, tho.""
-- ""Girl's got that good energy, no cap""
-- ""She's hella lit and energized right now""
-- ""'S her day one hundred percent, G""
-- 'Shes turnt up and ready for whatever""
-
-Note: Some of these translations may be more informal than others depending on the context",she is givingg glow up af lately..,,,,
-e2e_021,translate,to_english,real,"Bro, you are literally giving highkey mood right now.","Bro, you are literally giving openly and obviously right now.",highkey mood,openly and obviously,"The translation is:
-
-""Hey brother, your post or comment is clearly expressing a strong and obvious positive emotional state at the moment."" 
-
-In simpler terms, someone is saying that another person's words (likely on social media) have conveyed their happiness in an extremely clear way. The phrase ""highkey mood"" means openly showing one's emotions, often with enthusiasm. So essentially they're complimenting how","Friend, you're literally showing openly and obviously energy right now without question.",,,,
-e2s_021,translate,to_slang,real,"Bro, you are literally giving openly and obviously right now.","Bro, you are literally giving highkey mood right now.",highkey mood,openly and obviously,"What's good? You're low-key (or high-key) serving up some real talk, bruh! ""Giving it away for free"" is a classic phrase that means someone is being super open and honest about their thoughts or feelings.
-
-In this context, the translation would be:
-
-""Dude, your honesty is on point rn.""
-
-Or, in even more relatable terms:
-
-""You're straight fire","bro, you're literally being so openyandhonest rn.",,,,
-e2e_022,translate,to_english,trending,Ngl that pizza was top tier.,"Not gonna lie, that pizza was extremely good.",ngl,not gonna lie,"The translation of ""Ngl"" is likely an abbreviation for a phrase, and the full sentence would be:
-
-""NGL (Not Going Low) that pizza WAS TOP TIER.""
-
-However, without more context or information about what 'NGL' stands for in this case, it's difficult to provide a precise answer.
-
-If you meant something else by NGL then please give me some additional details so","Honestly, I have never witnessed anything more of the highest quality in my entire life.",,,,
-e2s_022,translate,to_slang,trending,"Not gonna lie, that pizza was extremely good.",Ngl that pizza was top tier.,ngl,not gonna lie,"Here's the translation:
-
-""Honestly tho, dat pizza wuz straight fire.""
-
-Breakdown:
-
-- ""Honestly tho"" is a casual way of saying 'honesty' or expressing genuine thoughts.
-- ""dat"" is an informal shortening for 'that'.
-- ""wuz"" is the Gen Z version of 'was', often used in place of traditional grammar rules.
--'straight fire",Ngl that pizzae bussin af!,,,,
-e2e_023,translate,to_english,viral,The whole comment section was tea about this.,The whole comment section was gossip about this.,tea,gossip,"This translation reads as:
-
-""The entire comments section was just a big argument over this.""
-
-In other words, the commenter is saying that almost everyone in the online discussion (the ""comment section"") had strong opinions and disagreements (""tea"" being slang for gossip or controversy) regarding the topic at hand.",The entire comment section showed gossip or rumor energy about this situation.,,,,
-e2s_023,translate,to_slang,viral,The whole comment section was gossip about this.,The whole comment section was tea about this.,tea,gossip,"""Lowkey, the entire comments were all tea on that one."" 
-
-Explanation of terms used:
-
-- ""Gossip"": Refers to rumors or unverified information.
-- ""Comment section"": The part at the bottom of a social media post where people can leave their thoughts and opinions (in this case, mostly negative).
-- ""Tea"": A colloquial term for juicy gossip.
-
-Alternatively",the whole commentt sectionn wya about dis..,,,,
-e2e_024,translate,to_english,real,Why is everyone so random game lately?,Why is everyone so situation or context lately?,random game,situation or context,"The translation of the given sentence in English would be:
-
-""Why has everybody been playing games randomly recently?"" or 
-
-"" Why are people being so unpredictable and spontaneous with their gaming habits lately?""
-
-However, a more natural-sounding translation could be:
-
-""People have been acting really weirdly when it comes to video games lately.""
-
-Or simply,
-
-""Gaming behavior seems completely erratic/irrational right now.""",Why is people acting so a situation where you need to make a quick decision these days?,,,,
-e2s_024,translate,to_slang,real,Why is everyone so situation or context lately?,Why is everyone so random game lately?,random game,situation or context,"Here are a few options:
-
-1. ""What's good, fam? Everyone's low-key salty about stuff without even considerin' the tea.""
-   - This translates to saying that people aren't considering the full story (the 'tea') before reacting.
-
-2. ""I'm dead, why y'all always tryna get all up in arms over nothin'? Can we just keep it mov",why is everybodye so sitchs lately fr,,,,
-e2e_025,translate,to_english,trending,His reaction was so highkey I could not stop laughing.,His reaction was so extremely openly and obviously I could not stop laughing.,so highkey,extremely openly and obviously,"The translation is:
-
-""His response or behavior was extremely obvious and humorous that it made me unable to hold back my laughter."" 
-
-In this context, ""highkey"" means 'obviously' or 'extremely', but in informal language, particularly on social media platforms like Twitter, the phrase has taken a different meaning - indicating something as openly funny or ridiculous that you can't help but laugh at",His reactiond was very openly and obviously i could not continue laughing. friend,,,,
-e2s_025,translate,to_slang,trending,His reaction was so extremely openly and obviously I could not stop laughing.,His reaction was so highkey I could not stop laughing.,so highkey,extremely openly and obviously,"Here's the translation:
-
-""Him literally lost it, no cap - his face was SO extra and obvious that I'm dead, lol.""
-
-Breakdown:
-
-- ""Lost it"" means he completely freaked out or had a major meltdown.
-- ""No cap"" is an expression used to emphasize something (meaning 'no lie' or 'for real').
-- ""SO extra"" refers to someone being",his reactione was so highkey i cldnt stp lmao.,,,,
-e2e_026,translate,to_english,viral,Not me acting all sis at the worst time.,Not me acting all extremely sister or close female friend at the worst time.,so sis,extremely sister or close female friend,"The translation of ""Not me being all'sis' at the worse (or worst) time"" is:
-
-""Not me behaving like a silly sister or trying too hard to be friendly and supportive during my most difficult moment."" 
-
-In informal language, especially on social media platforms such as Twitter, this phrase could also mean that someone feels others are treating them inappropriately by offering support when they don't",I find myself being very close female friend group about all this and that is funny.,,,,
-e2s_026,translate,to_slang,viral,Not me acting all extremely sister or close female friend at the worst time.,Not me acting all sis at the worst time.,so sis,extremely sister or close female friend,"Here's a translation of that sentence into Gen Z-speak:
-
-""Lowkey, I was hella extra and trying too hard with my girl vibes when it totally wasn't needed.""
-
-Or another way could be:
-
-""I'm dead, I went full-on'sister' mode during one of the most awkward times ever""
-
-Note - 
-
-- ""lowkey"" means secretly 
-- ""hella",Nme actingg all sis af at the wrostt timee..,,,,
-e2e_027,translate,to_english,real,He went full cap af mode during the match.,He went full extremely a lie mode during the match.,cap af,extremely a lie,"The translation is:
-
-""He went all out, completely crazy and over-the-top (think 'extra' or 'excessive'), in a playful manner resembling someone wearing an oversized baseball cap ('cap') while being extremely enthusiastic about something (""mode"") - likely referring to his energetic behavior during the sporting event.""",He went into full extremely lie or falsehood mode during that match. I promise,,,,
-e2s_027,translate,to_slang,real,He went full extremely a lie mode during the match.,He went full cap af mode during the match.,cap af,extremely a lie,"To translate that into Gen Z-speak, I'd say:
-
-""He low-key lied his way through the whole game.""
-
-Here's what each part means in this context:
-
-- ""Full"" is an intensifier used for extreme situations.
-- ""Extremely"" was already present but using it as well emphasizes how he acted (extreme lies).
-- ""A lie mode"" refers to someone acting dishonest",he went full lmao af modee durin da match..,,,,
-e2e_028,translate,to_english,trending,How do people stay this tryhard all the time?,How do people stay this over trying all the time?,tryhard,over trying,"The translation of ""tryhard"" is not a direct word in English, but it seems you're referring to someone who consistently tries too hard or appears overly eager. Here's an equivalent phrase:
-
-""How does someone manage to be so excessively enthusiastic and effortful all thetime?""
-
-Alternatively, if you'd like a more idiomatic expression, consider these options:
-
-- How can they keep up such a high",I don't know how people stay so someone who tries too hard all thetime.,,,,
-e2s_028,translate,to_slang,trending,How do people stay this over trying all the time?,How do people stay this tryhard all the time?,tryhard,over trying,"In Gen Z lingo, you could say:
-
-""Lowkey, how are they not dead from tryna do it all tho?""
-
-Here's a breakdown of the translation:
-
-- ""Lowkey"" means secretly or quietly.
-- ""Tryna"" is short for ""trying,"" and in this context, it implies constantly attempting something (in this case, doing everything).
-- ""Do it all""",how do you event stay this tryhard all the tme?,,,,
-e2e_029,translate,to_english,viral,That whole situation was pure lowkey.,That whole situation was pure extremely somewhat secretly.,so lowkey,extremely somewhat secretly,"The translation of ""that whole situation"" is not provided, but I can translate the phrase for you.
-
-""That whole situation being 'lowkey'"" means that everything about it (the entire circumstance or event) had a subtle and possibly secretive nature - perhaps something wasn't openly discussed or acknowledged at first glance, even though there might have been some underlying truth or issue present in an understated way.""","That whole thing felt like secretly, kind of openly and obviously.",,,,
-e2s_029,translate,to_slang,viral,That whole situation was pure extremely somewhat secretly.,That whole situation was pure lowkey.,so lowkey,extremely somewhat secretly,"Here's the translation:
-
-""That whole thing was lowkey super extra, but also kinda hella secretive.""
-
-Breakdown:
-
-- ""Lowkey"" means something is subtle or hidden.
-- ""Super extra"" refers to an over-the-top reaction that goes above and beyond what would normally be expected (think of it like being 'extra' in a good way).
-- However I changed this part because you",that'ss wholee storyt time af no cap..,,,,
-un_000,unanswerable,unanswerable,unanswerable,asdfghjkl qwerty zxcvbnm,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"It appears you've translated a common keyboard layout. The translation is:
-
-""ASDFGHJKL QWERTY ZXCVBNM""
-
-This sequence represents the keys on a standard QWERYIUPAD keyboard, often used as a password or phrase in computing and gaming communities.",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_001,unanswerable,unanswerable,unanswerable,########## $$$$$ %%%%,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"The given text appears to be a sequence of characters that doesn't form any recognizable language or code. However, I can attempt to interpret it as an example of ""obscure"" or ""abandoned"" formatting.
-
-If we were to translate this into plain English (or rather, ASCII), the result would look something like:
-
-```
-#            $
-$$          $$$$
-%%         %
-```",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_002,unanswerable,unanswerable,unanswerable,42 42 42 42 42,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"The translation of ""42 43"" is not available, however I can translate the numbers for you.
-
-It appears that you have entered a sequence of repeating digits. In this case, it seems like you meant to type something else or possibly an error occurred while typing.
-
-
-However if we look at some popular references:
-
-- The number '42' has been referenced in J.R.R. Tolkien's book",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_003,unanswerable,unanswerable,unanswerable,zxqvwk bnmpld,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"I can translate it for you.
-
-""ZxqvwK BnmplD""
-
-Translates to:
-
-""What is the weather like today?""",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_004,unanswerable,unanswerable,unanswerable,lorem ipsum dolor sit amet,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"The phrase ""lorem ipsom dolor sit amet"" is a Latin sentence that translates roughly to:
-
-""There are many words, but few things.""
-
-However, the more common and well-known translation of this sequence in English is actually from the text 'Lorem Ipsum' which has been used as placeholder or dummy data for various purposes. 
-
-In reality it's often translated into - 
-""The world is too",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_005,unanswerable,unanswerable,unanswerable,aaaaaaaaaaaaaaaa,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"It appears that you have entered a sequence of ""a"" characters. Since there are many, I'll assume you want me to translate it into English.
-
-In this case, the translation is:
-
-""A-a-a-a-A-a-a""
-
-However, if you're looking for something more meaningful or specific, please provide context or clarify what you mean by these repeated 'a's.",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_006,unanswerable,unanswerable,unanswerable,?!?!?! ...... ?!?!,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"It appears that you have provided a string of exclamation marks and some unclear characters. I'll do my best to translate it.
-
-The first part, ""?!?!?"", seems like an expression of surprise or excitement in many languages, including Spanish (""¡Qué pasó!"", which translates to ""!What happened?!"" but is more commonly used as an interjection).
-
-However, the second part ""...?????""",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_007,unanswerable,unanswerable,unanswerable,qwertyuiop asdfghjkl,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"The given text appears to be a sequence of characters that resembles the top row of letters on a standard QWERTY keyboard layout. 
-
-Here's an attempt at translating it into plain English:
-
-""Hello, I'm typing in all caps."" or more likely ""I love you.""
-
-However, without context, this is purely speculative and could mean anything else entirely! If there was any specific meaning intended",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_008,unanswerable,unanswerable,unanswerable,blorptangle frimbulate,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"I couldn't find any information on the words ""blorpty"" and ""frimbulate"". However, I can try to break down these terms into possible components.
-
-- The prefix 'bor-' or '-lorp' seems unrelated to common prefixes in languages.
-- A suffix like ""-tang-"" might be reminiscent of a word from some language family (e.g., Tanganyika),",I'm not sure how to translate that — the input isn't clear to me.,,,,
-un_009,unanswerable,unanswerable,unanswerable,xkcd plmokn wsxedc,I'm not sure how to translate that — the input isn't clear to me.,,(unanswerable — the model should abstain),"I can translate that for you.
-
-It appears to be a jumbled mix of letters, but I'll try my best to decipher it. 
-
-The translation is:
-
-""XKCD PLMOKN WSDEXC""
-
-However, if we separate the words and ignore the random characters in between (wsdexc), this seems like an attempt at translating ""What's with the keyboard layout?"" or",I'm not sure how to translate that — the input isn't clear to me.,,,,
+However, I noticed that the original text seems like it could be a scrambled version of ""What X KDC Problem Is Not Solved"". If you'd like me to try and unscramble or retranslate based on this",I'm not sure how to translate that — the input isn't clear to me.,,,,

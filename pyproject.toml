@@ -15,8 +15,10 @@ dependencies = [
     "fastapi>=0.115",       # local demo server (serve.py) that backs the chat mockup
     "uvicorn>=0.30",
     "requests>=2.32",       # fetch_urban.py: pull Urban Dictionary definitions
-    "openai>=1.40",        # NVIDIA API is OpenAI-compatible (teacher + judge)
-    "python-dotenv>=1.0",  # load NVIDIA_API_KEY from a gitignored .env
+    "openai>=1.40",         # OpenAI-compatible clients (xAI Grok, Groq, NVIDIA)
+    "python-dotenv>=1.0",   # load API keys from a gitignored .env
+    "nltk>=3.10.0",         # METEOR in src/evaluate.py
+    "bert-score>=0.3.13",   # BERTScore in src/evaluate.py
 ]
 
 [project.optional-dependencies]

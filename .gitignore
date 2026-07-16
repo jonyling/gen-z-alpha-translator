@@ -27,6 +27,14 @@ data/unused/genz_slang_usage_2020_2025.csv
 #token
 .hugging token
 
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# Grok generation audit log can get large; keep the filtered CSV if you want
+data/raw/genz_grok_synthetic.raw.jsonl
+
 # Private notes — personal, NOT for the team / not uploaded
 *.private.md
 *nvidia/

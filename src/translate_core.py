@@ -12,19 +12,23 @@ from abstain import looks_unclear
 
 # Shared decoding settings. repetition_penalty + no_repeat_ngram_size stop the
 # "letaletaleta…" loops the slang->English direction is prone to.
+# Cap length so the model can be a bit verbose without launching into a lecture.
 GEN_KWARGS = dict(
-    max_new_tokens=80,
+    max_new_tokens=60,
     use_cache=True,
     do_sample=False,
     repetition_penalty=1.3,
     no_repeat_ngram_size=3,
 )
 
+# Appended to every user turn: allow multi-sentence translations, but no meta-talk.
+TRANSLATE_ONLY = "No explanation."
+
 
 def generate_translation(model, tokenizer, tag: str, text: str) -> str:
     """Run the model for one (tag, text) prompt and return the decoded reply."""
     enc = tokenizer.apply_chat_template(
-        [{"role": "user", "content": f"{tag}\n{text}"}],
+        [{"role": "user", "content": f"{tag}\n{text}\n\n{TRANSLATE_ONLY}"}],
         tokenize=True, add_generation_prompt=True,
         return_tensors="pt", return_dict=True,
     )
