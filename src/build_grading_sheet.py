@@ -286,30 +286,17 @@ def rebuild_train() -> None:
         raise SystemExit(f"prepare_data failed with code {rc}")
 
 
-def _load_model(model_name: str):
-    from unsloth import FastLanguageModel
-
-    model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name=model_name,
-        max_seq_length=MAX_SEQ_LEN,
-        dtype=None,
-        load_in_4bit=True,
-    )
-    if getattr(tokenizer, "eos_token", None) in (None, "<EOS_TOKEN>"):
-        tokenizer.eos_token = "<|eot_id|>"
-    FastLanguageModel.for_inference(model)
-    return model, tokenizer
-
-
 def fill_outputs(items: list[dict], which: str) -> None:
     """which: 'base' | 'tuned'. Writes into items[*][f'{which}_output']."""
     import gc
 
     import torch
 
+    from model_load import load_infer_model
+
     name = BASE_MODEL if which == "base" else str(ADAPTER_DIR)
     print(f">> loading {which} model ({name})…")
-    model, tokenizer = _load_model(name)
+    model, tokenizer = load_infer_model(name, max_seq_length=MAX_SEQ_LEN)
     key = f"{which}_output"
     for i, it in enumerate(items):
         out = generate_translation(model, tokenizer, it["tag"], it["input"])

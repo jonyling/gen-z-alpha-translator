@@ -40,3 +40,12 @@ data/raw/genz_grok_synthetic.raw.jsonl
 *nvidia/
 # Secrets
 .env
+
+# Local backups / run logs (keep the live grading sheet tracked)
+*.bak
+*.bak.csv
+*.pre_grok_eval.bak
+*.pre_refill.bak
+genz_lora_adapter.bak/
+results/*.log
+results/*_bad.bak.csv

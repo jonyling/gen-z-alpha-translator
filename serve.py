@@ -15,8 +15,8 @@ Requires that training has been run once (so genz_lora_adapter/ exists).
 
 from pathlib import Path
 import sys
+import threading
 
-from unsloth import FastLanguageModel
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse, JSONResponse
 from pydantic import BaseModel
@@ -25,6 +25,7 @@ import uvicorn
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
 from config import ABSTAIN_MESSAGE  # noqa: E402
+from model_load import load_infer_model  # noqa: E402
 from translate_core import translate as core_translate  # noqa: E402
 
 ADAPTER_DIR = ROOT / "genz_lora_adapter"
@@ -33,18 +34,14 @@ MAX_SEQ_LEN = 1024
 
 if not ADAPTER_DIR.exists():
     sys.exit(f"No trained adapter at {ADAPTER_DIR}. Run the training notebook once first.")
+if not HTML_PATH.exists():
+    sys.exit(f"Missing demo HTML at {HTML_PATH}")
 
 print(">> loading model (base + LoRA adapter)…")
-model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name=str(ADAPTER_DIR), max_seq_length=MAX_SEQ_LEN, dtype=None, load_in_4bit=True,
-)
-FastLanguageModel.for_inference(model)
+model, tokenizer = load_infer_model(ADAPTER_DIR, max_seq_length=MAX_SEQ_LEN)
 print(">> model ready")
 
-
-import threading
 _gen_lock = threading.Lock()   # serialize GPU calls so concurrent requests don't collide
-
 
 app = FastAPI()
 

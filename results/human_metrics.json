@@ -1,0 +1,27 @@
+{
+  "source_csv": "results/grading_sheet_post_grok.csv",
+  "buckets": {
+    "translate_base": {
+      "n": 0,
+      "accuracy": null,
+      "agreement": null
+    },
+    "translate_tuned": {
+      "n": 0,
+      "accuracy": null,
+      "agreement": null
+    },
+    "unanswerable_base": {
+      "n": 0,
+      "accuracy": null,
+      "agreement": null
+    },
+    "unanswerable_tuned": {
+      "n": 0,
+      "accuracy": null,
+      "agreement": null
+    }
+  },
+  "inter_rater_agreement": null,
+  "inter_rater_n": 0
+}

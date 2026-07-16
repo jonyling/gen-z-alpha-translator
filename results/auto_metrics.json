@@ -1,61 +1,61 @@
 {
-  "source_csv": "results/grading_sheet.csv",
-  "bert_model": "bert-base-uncased",
+  "source_csv": "results/grading_sheet_post_grok.csv",
+  "bert_model": null,
   "base": {
     "n_translate": 60,
     "n_unanswerable": 10,
-    "accept_rate": 0.1,
-    "meteor": 0.1422400923660399,
-    "bertscore_f1": 0.5333742663264275,
-    "abstain_rate_unanswerable": 0.2,
-    "hallucination_rate_unanswerable": 0.8,
+    "accept_rate": 0.03333333333333333,
+    "meteor": 0.12702620674996556,
+    "bertscore_f1": null,
+    "abstain_rate_unanswerable": 0.1,
+    "hallucination_rate_unanswerable": 0.9,
     "by_direction": {
       "to_english": {
         "n": 30,
-        "accept_rate": 0.2,
-        "meteor": 0.20471077691348952,
-        "bertscore_f1": 0.5773431678613027
+        "accept_rate": 0.06666666666666667,
+        "meteor": 0.17883419455267885,
+        "bertscore_f1": null
       },
       "to_slang": {
         "n": 30,
         "accept_rate": 0.0,
-        "meteor": 0.07976940781859036,
-        "bertscore_f1": 0.4894053647915522
+        "meteor": 0.07521821894725232,
+        "bertscore_f1": null
       },
       "ALL": {
         "n": 60,
-        "accept_rate": 0.1,
-        "meteor": 0.1422400923660399,
-        "bertscore_f1": 0.5333742663264275
+        "accept_rate": 0.03333333333333333,
+        "meteor": 0.12702620674996556,
+        "bertscore_f1": null
       }
     }
   },
   "tuned": {
     "n_translate": 60,
     "n_unanswerable": 10,
-    "accept_rate": 0.03333333333333333,
-    "meteor": 0.14549012655028112,
-    "bertscore_f1": 0.5007045273979505,
+    "accept_rate": 0.08333333333333333,
+    "meteor": 0.08905103668612321,
+    "bertscore_f1": null,
     "abstain_rate_unanswerable": 1.0,
     "hallucination_rate_unanswerable": 0.0,
     "by_direction": {
       "to_english": {
         "n": 30,
-        "accept_rate": 0.03333333333333333,
-        "meteor": 0.1485818883974231,
-        "bertscore_f1": 0.5143288473288218
+        "accept_rate": 0.06666666666666667,
+        "meteor": 0.11032972983980205,
+        "bertscore_f1": null
       },
       "to_slang": {
         "n": 30,
-        "accept_rate": 0.03333333333333333,
-        "meteor": 0.1423983647031391,
-        "bertscore_f1": 0.48708020746707914
+        "accept_rate": 0.1,
+        "meteor": 0.0677723435324444,
+        "bertscore_f1": null
       },
       "ALL": {
         "n": 60,
-        "accept_rate": 0.03333333333333333,
-        "meteor": 0.14549012655028112,
-        "bertscore_f1": 0.5007045273979505
+        "accept_rate": 0.08333333333333333,
+        "meteor": 0.08905103668612321,
+        "bertscore_f1": null
       }
     }
   },
@@ -64,6 +64,6 @@
     "abstain": "unanswerable rows; hallucination = fail to abstain",
     "bertscore": "semantic F1 vs reference (translate rows only)",
     "meteor": "synonym-aware alignment vs reference (translate rows only)",
-    "primary_metric": "human grading in grading_sheet.csv (not this script)"
+    "primary_metric": "human grading in grading_sheet_post_grok.csv (uv run python src/score_human.py)"
   }
 }

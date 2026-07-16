@@ -9,7 +9,7 @@ Metrics (proposal + METEOR):
 
 Usage (from project root):
     uv run python src/evaluate.py
-    uv run python src/evaluate.py --csv results/grading_sheet_retrained.csv
+    uv run python src/evaluate.py --csv results/grading_sheet_post_grok.csv
     uv run python src/evaluate.py --skip-bert   # faster, skips BERTScore download
 
 Writes:
@@ -34,7 +34,12 @@ from abstain import is_abstention  # noqa: E402
 from config import PROJECT_ROOT  # noqa: E402
 
 RESULTS_DIR = PROJECT_ROOT / "results"
-DEFAULT_CSV = RESULTS_DIR / "grading_sheet.csv"
+# Prefer the post-Grok held-out sheet; fall back to the generic name.
+_DEFAULT_CANDIDATES = (
+    RESULTS_DIR / "grading_sheet_post_grok.csv",
+    RESULTS_DIR / "grading_sheet.csv",
+)
+DEFAULT_CSV = next((p for p in _DEFAULT_CANDIDATES if p.exists()), _DEFAULT_CANDIDATES[0])
 
 
 def _norm(s: str) -> str:
@@ -274,7 +279,10 @@ def main() -> None:
             "abstain": "unanswerable rows; hallucination = fail to abstain",
             "bertscore": "semantic F1 vs reference (translate rows only)",
             "meteor": "synonym-aware alignment vs reference (translate rows only)",
-            "primary_metric": "human grading in grading_sheet.csv (not this script)",
+            "primary_metric": (
+                "human grading in grading_sheet_post_grok.csv "
+                "(uv run python src/score_human.py)"
+            ),
         },
     }
     out_json = RESULTS_DIR / "auto_metrics.json"
@@ -286,8 +294,10 @@ def main() -> None:
 
     print(f"\nWrote {out_json}")
     print(f"Wrote {out_csv}")
-    print("Human grading (primary) is still: fill rater columns in the grading sheet, "
-          "then run notebook §7 scoring cell.")
+    print(
+        "Human grading (primary): fill rater columns in grading_sheet_post_grok.csv, "
+        "then run: uv run python src/score_human.py"
+    )
 
 
 if __name__ == "__main__":

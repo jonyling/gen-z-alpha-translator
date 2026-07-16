@@ -5,17 +5,19 @@ little Gradio chat box. Use this instead of re-running the whole notebook.
 
 Usage:
     uv run python app.py
+    GRADIO_SHARE=0 uv run python app.py   # local-only (no public link)
 
 Requires that training has been run at least once (so the adapter folder exists).
 """
 
 from pathlib import Path
+import os
 import sys
 
-from unsloth import FastLanguageModel
 import gradio as gr
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+from model_load import load_infer_model  # noqa: E402
 from translate_core import translate as core_translate  # noqa: E402
 
 ADAPTER_DIR = Path(__file__).resolve().parent / "genz_lora_adapter"
@@ -28,13 +30,7 @@ if not ADAPTER_DIR.exists():
     )
 
 print(">> loading fine-tuned model (base + your LoRA adapter)...")
-model, tokenizer = FastLanguageModel.from_pretrained(
-    model_name=str(ADAPTER_DIR),   # unsloth loads the base model + your adapter
-    max_seq_length=MAX_SEQ_LEN,
-    dtype=None,
-    load_in_4bit=True,
-)
-FastLanguageModel.for_inference(model)
+model, tokenizer = load_infer_model(ADAPTER_DIR, max_seq_length=MAX_SEQ_LEN)
 print(">> ready")
 
 
@@ -64,5 +60,6 @@ with gr.Blocks(title="Gen Z Slang Translator") as app:
 
 if __name__ == "__main__":
     # share=True gives a public link (valid ~72h) to send to teammates.
-    # Set to False for local-only.
-    app.launch(share=True)
+    # Set GRADIO_SHARE=0 for local-only.
+    share = os.environ.get("GRADIO_SHARE", "1").strip().lower() not in ("0", "false", "no")
+    app.launch(share=share)

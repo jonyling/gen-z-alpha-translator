@@ -25,12 +25,17 @@ The trained model is already in the repo, so you can run the app without trainin
 ## Who does what
 
 **Data & eval (grading — this is our main grade):**
-- [ ] Two people open `results/grading_sheet.csv`.
+- [ ] Two people open `results/grading_sheet_post_grok.csv` (also mirrored as `grading_sheet.csv`).
 - [ ] For every row put **1 (correct)** or **0 (incorrect)**:
   - BASE answer → `base_rater1`, `base_rater2`
   - TUNED answer → `tuned_rater1`, `tuned_rater2`
 - [ ] Judge on *meaning* vs the `reference`/`meaning` columns (wording doesn't matter).
-- [ ] Re-run the **scoring cell** (section 7) in the notebook → gives base-vs-tuned accuracy.
+- [ ] Score locally after both raters finish:
+  ```bash
+  uv run python src/score_human.py
+  # optional auto metrics:
+  uv run python src/evaluate.py --skip-bert
+  ```
 
 **Modelling:**
 - [x] Training done (6,000-sample run). Optional: retrain on full data (won't change the story much).
