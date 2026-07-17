@@ -2,14 +2,14 @@
   "source_csv": "results/grading_sheet_post_grok.csv",
   "buckets": {
     "translate_base": {
-      "n": 0,
-      "accuracy": null,
-      "agreement": null
+      "n": 60,
+      "accuracy": 0.48333333333333334,
+      "agreement": 0.6833333333333333
     },
     "translate_tuned": {
-      "n": 0,
-      "accuracy": null,
-      "agreement": null
+      "n": 60,
+      "accuracy": 0.2833333333333333,
+      "agreement": 0.7333333333333333
     },
     "unanswerable_base": {
       "n": 0,
@@ -22,6 +22,32 @@
       "agreement": null
     }
   },
-  "inter_rater_agreement": null,
-  "inter_rater_n": 0
+  "by_direction": {
+    "to_english": {
+      "base": {
+        "n": 30,
+        "accuracy": 0.36666666666666664,
+        "agreement": 0.6666666666666666
+      },
+      "tuned": {
+        "n": 30,
+        "accuracy": 0.36666666666666664,
+        "agreement": 0.6333333333333333
+      }
+    },
+    "to_slang": {
+      "base": {
+        "n": 30,
+        "accuracy": 0.6,
+        "agreement": 0.7
+      },
+      "tuned": {
+        "n": 30,
+        "accuracy": 0.2,
+        "agreement": 0.8333333333333334
+      }
+    }
+  },
+  "inter_rater_agreement": 0.7083333333333334,
+  "inter_rater_n": 120
 }

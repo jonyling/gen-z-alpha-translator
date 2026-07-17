@@ -64,6 +64,17 @@ def score(csv_path: Path) -> dict:
     out["buckets"]["translate_base"] = report(tr, "base_rater1", "base_rater2", "BASE ")
     out["buckets"]["translate_tuned"] = report(tr, "tuned_rater1", "tuned_rater2", "TUNED")
 
+    out["by_direction"] = {}
+    for direction in ("to_english", "to_slang"):
+        sub = tr[tr["direction"] == direction] if "direction" in tr.columns else tr.iloc[0:0]
+        if len(sub) == 0:
+            continue
+        print(f"\n=== [{direction}] ===")
+        out["by_direction"][direction] = {
+            "base": report(sub, "base_rater1", "base_rater2", "BASE "),
+            "tuned": report(sub, "tuned_rater1", "tuned_rater2", "TUNED"),
+        }
+
     print("\n=== Unanswerable / abstain ===")
     un = df[df["type"] == "unanswerable"]
     if len(un) == 0:

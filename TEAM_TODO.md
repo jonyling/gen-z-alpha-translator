@@ -25,7 +25,9 @@ The trained model is already in the repo, so you can run the app without trainin
 ## Who does what
 
 **Data & eval (grading — this is our main grade):**
-- [ ] Two people open `results/grading_sheet_post_grok.csv` (also mirrored as `grading_sheet.csv`).
+- [x] Two people graded `results/grading_sheet_post_grok.csv` (synced to `grading_sheet.csv`).
+- [x] Final metrics: `human_metrics.json` + `auto_metrics.json` (human: base 48% → tuned 28%; abstain 10% → 100%).
+- [~] Unanswerable rows were left blank by raters (use auto abstain for that slice).
 - [ ] For every row put **1 (correct)** or **0 (incorrect)**:
   - BASE answer → `base_rater1`, `base_rater2`
   - TUNED answer → `tuned_rater1`, `tuned_rater2`

@@ -45,18 +45,17 @@ recommendation) and to your four roles. Aim ~50–55 sec per slide. Practice onc
 
 ## Slide 4 — Results (speaker: **Data & eval**)  ~55s
 **Title:** Before vs after (honest numbers)
-- **Primary metric = human accuracy** (2 raters), correct/incorrect vs reference meaning.
-- Table: accuracy **base vs tuned**, per direction + overall (fill from the scoring cell).
+- **Primary metric = human accuracy** (2 raters), both must mark 1. Sheet: `grading_sheet_post_grok.csv`.
 
   | | Base | Tuned |
   |---|---|---|
-  | Slang → English | __% | __% |
-  | English → Slang | __% | __% |
-  | Overall | __% | __% |
+  | Slang → English | 37% | 37% |
+  | English → Slang | 60% | 20% |
+  | Overall | **48%** | **28%** |
 
-- Inter-rater agreement: __%.
-- **Be honest:** name where it *didn't* improve (e.g. one direction lagged, or rare terms).
-- *(Optional)* mention the local 8B judge agreement if you ran it.
+- Inter-rater agreement: **71%**.
+- Auto abstain on junk (not human-graded): base **10%** → tuned **100%**.
+- **Be honest:** fine-tune did **not** lift human translation accuracy on this held-out set; English→slang got worse. Win is safety/abstain, not meaning.
 
 *Visual:* a simple base-vs-tuned bar chart.
 
@@ -64,9 +63,8 @@ recommendation) and to your four roles. Aim ~50–55 sec per slide. Practice onc
 
 ## Slide 5 — Error analysis (speaker: **Analysis**)  ~45s
 **Title:** What it still gets wrong
-- 1–2 tuned-model failure cases (from the grading sheet) + *why*:
-  - e.g. very new/rare slang not in training data.
-  - e.g. over-literal English→slang (inserts the wrong slang term).
+- Tuned often too terse / wrong slang on English→slang (drags human score to 20%).
+- Rare acronyms still missed (e.g. TNT → generic “good night”).
 - Shows you understand the model, not just the score.
 
 *Visual:* 1–2 failing examples with a one-line reason each.
@@ -75,12 +73,11 @@ recommendation) and to your four roles. Aim ~50–55 sec per slide. Practice onc
 
 ## Slide 6 — Recommendation (speaker: **Coordinator**)  ~40s
 **Title:** Deploy / Iterate / Hold — our call
-- State the call clearly (likely **Iterate**: it improved meaningfully but rare-slang coverage
-  and one direction need more data) and **defend it** with the numbers from slide 4.
-- One line on next step (e.g. add real scraped pairs from `final dataset.xlsx`).
-- *(Optional)* live 30-sec Gradio demo if time allows — **only if practiced and safe**.
+- Call: **HOLD** (do not deploy as a translator) — primary human metric fell base 48% → tuned 28%.
+- Keep the abstain behaviour; **iterate** offline (better English→slang data, decode, re-eval) before claiming success.
+- *(Optional)* 30-sec Gradio demo of abstain / one slang→English hit — only if practiced.
 
-*Visual:* big DEPLOY / ITERATE / HOLD with your choice circled + the one reason.
+*Visual:* big DEPLOY / ITERATE / HOLD with HOLD circled.
 
 ---
 

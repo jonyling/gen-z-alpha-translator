@@ -1,5 +1,22 @@
-Refilled base/tuned outputs from frozen eval.jsonl with tightened decode (short single-sentence, no option lists).
-Eval pairs unchanged; any prior human rater cells were preserved.
+Human grading finalized (Hongming / Max / team) on grading_sheet_post_grok.
 
-Human grading: fill base_rater1/2 and tuned_rater1/2 with 1 or 0.
-Then run the notebook §7 scoring cell, or score by hand for slides.
+Canonical files (identical content):
+  results/grading_sheet_post_grok.csv
+  results/grading_sheet.csv
+Teammate upload kept as:
+  results/grading_sheet_post_grok (final).csv
+
+Primary metric (both raters = 1):
+  Translate overall:  base 48%  →  tuned 28%   (n=60)
+  Slang → English:    base 37%  →  tuned 37%   (n=30)
+  English → Slang:    base 60%  →  tuned 20%   (n=30)
+  Inter-rater agreement: 71% (n=120 dual-rated pairs)
+  Unanswerable rows: not dual-rated by humans (use auto abstain: base 10% → tuned 100%)
+
+Score with:
+  uv run python src/score_human.py
+  uv run python src/evaluate.py --csv results/grading_sheet_post_grok.csv
+
+Outputs:
+  results/human_metrics.json
+  results/auto_metrics.json
